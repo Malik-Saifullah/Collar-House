@@ -541,21 +541,6 @@
                                                             class="form-control" required=""
                                                             style="margin-bottom: 0px !important;">
                                                     </div>
-                                                    <div class="row mb-5">
-                                                        <div class="col-md-12">
-                                                            <h4 class="card-title mb-3">Payment Category</h4>
-                                                            <label class="radio radio-warning">
-                                                                <input type="radio" name="radio" value="3">
-                                                                <span>Debit</span>
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                            <label class="radio radio-success">
-                                                                <input type="radio" name="radio" value="2">
-                                                                <span>Credit</span>
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <!-- End -->
 
@@ -848,6 +833,82 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label for="customerNameList">Select Customer Name</label>
+                                    <select id="customerNameList" class="form-control" disabled style="cursor: no-drop;">
+                                        <option>Customer Name</option>
+                                        <option selected>Aslam</option>
+                                        <option>Nadeem</option>
+                                        <option>Customer 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group float-right">
+                                    <label for="customerName">
+                                        <p class="m-0"></p>
+                                    </label>
+                                    <button class="d-block btn btn-primary ml-auto" type="button" data-toggle="collapse"
+                                        data-target="#disabledCollapseExample" aria-expanded="false"
+                                        aria-controls="disabledCollapseExample" disabled style="cursor: no-drop;">
+                                        Add Customer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="collapse" id="disabledCollapseExample">
+                                    <div class="card card-body">
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput">Customer:</label>
+                                                <input type="text" class="form-control" id="formGroupExampleInput"
+                                                    placeholder="Enter Customer Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput2">Company:</label>
+                                                <input type="text" class="form-control" id="formGroupExampleInput2"
+                                                    placeholder="Enter Company Name">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="quantity">Phone:</label>
+                                                        <input type="number" class="form-control" id="quantity"
+                                                            placeholder="Enter Phone Number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="price">Office Phone:</label>
+                                                        <input type="number" class="form-control" id="price"
+                                                            placeholder="Enter Office Phone Number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput3">Address</label>
+                                                <input type="text" class="form-control" id="formGroupExampleInput3"
+                                                    placeholder="Enter Company Address">
+                                            </div>
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse"
+                                                data-target="#collapseExample" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Cancel
+                                            </button>
+                                            <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                                data-target="#collapseExample" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Add Customer
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="price">Price Per Quantity (Rs)</label>
@@ -967,14 +1028,14 @@
                                 <ul role="tablist" class="nav bg-light nav-pills nav-fill mb-3"
                                     style="border-radius: 30px;">
                                     <li class="nav-item">
-                                        <a data-toggle="pill" href="#nav-tab-card" class="nav-link active"
+                                        <a data-toggle="pill" href="#nav-tab-card-1" class="nav-link active show"
                                             style="border-radius: 30px;">
                                             <i class="fas fa-money-check-alt text-dark" aria-hidden="true"></i>
                                             Online Transfer
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link"
+                                        <a data-toggle="pill" href="#nav-tab-paypal-1" class="nav-link"
                                             style="border-radius: 30px;">
                                             <i class="fas fa-money-bill-alt text-dark" aria-hidden="true"></i>
                                             Cash
@@ -988,11 +1049,11 @@
                                 <div class="tab-content">
 
                                     <!-- credit card info-->
-                                    <div id="nav-tab-card" class="tab-pane fade show active">
+                                    <div id="nav-tab-card-1" class="tab-pane fade active show">
                                         <form role="form" action="f_payment.php?sr=1" method="post">
                                             <div class="form-group">
-                                                <label for="username">Card Holder Name</label>
-                                                <input type="text" name="title" placeholder="Card Holder Name"
+                                                <label for="username">Account Title</label>
+                                                <input type="text" name="title" placeholder="Account Title"
                                                     required="" class="form-control">
                                             </div>
                                             <div class="form-group mt-5 mb-5">
@@ -1013,14 +1074,27 @@
                                                     placeholder="Amount" class="form-control"
                                                     required="" style="margin-bottom: 0px !important;">
                                             </div>
-                                            <button type="submit" class="subscribe btn btn-primary btn-block shadow-sm"
-                                                name="submit"> Confirm </button>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h4 class="card-title mb-3">Payment Category</h4>
+                                                    <label class="radio radio-warning">
+                                                        <input type="radio" name="radio" value="3">
+                                                        <span>Debit</span>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="radio radio-success">
+                                                        <input type="radio" name="radio" value="2">
+                                                        <span>Credit</span>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </form>
                                     </div>
                                     <!-- End -->
 
                                     <!-- Paypal info -->
-                                    <div id="nav-tab-paypal" class="tab-pane fade">
+                                    <div id="nav-tab-paypal-1" class="tab-pane fade">
                                         <form role="form" action="f_payment.php?sr=1" method="post">
                                             <div class="form-group mb-5">
                                                 <label data-toggle="tooltip">Name
@@ -1032,8 +1106,21 @@
                                                 </label>
                                                 <input type="text" required="" class="form-control" name="amount">
                                             </div>
-                                            <button type="submit" class="subscribe btn btn-primary btn-block shadow-sm"
-                                                name="submit"> Confirm </button>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h4 class="card-title mb-3">Payment Category</h4>
+                                                    <label class="radio radio-warning">
+                                                        <input type="radio" name="radio" value="3">
+                                                        <span>Debit</span>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="radio radio-success">
+                                                        <input type="radio" name="radio" value="2">
+                                                        <span>Credit</span>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </form>
                                     </div>
                                     <!-- End -->
@@ -1046,7 +1133,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Add Payment</button>
                 </div>
             </div>
         </div>
