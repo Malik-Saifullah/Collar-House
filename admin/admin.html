@@ -34,6 +34,10 @@
                 display: none;
             }
         }
+        .newOrderAddCustomProductType,.newOrderAddCustomProductName,
+        .addCustomProductType,.addCustomProductName{
+            display: none;
+        }
     </style>
 </head>
 
@@ -443,18 +447,42 @@
                         <div class="product-item">
                             <div id="borderTop" class="mt-3 mb-4 border-top" style="display: none;"></div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 newOrderSelectProductType">
                                     <div class="form-group">
-                                        <label for="formGroupExampleInput">Serial Number</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput"
-                                            placeholder="Enter Serial Number">
+                                        <label for="productType">Product Type</label>
+                                        <select id="productType" class="form-control">
+                                            <option>Select Product Type</option>
+                                            <option>Product Type 1</option>
+                                            <option>Product Type 2</option>
+                                            <option>Product Type 3</option>
+                                            <option class="newProductType">"Add New Product Type"</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 newOrderAddCustomProductType">
                                     <div class="form-group">
-                                        <label for="formGroupExampleInput2">Product Name</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2"
-                                            placeholder="Enter Product Name">
+                                        <label for="formGroupaddCustomProductType">New Product Type</label>
+                                        <input type="text" class="form-control" id="formGroupaddCustomProductType"
+                                            placeholder="Enter New Product Type">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 newOrderSelectProductName">
+                                    <div class="form-group">
+                                        <label for="productType">Product Name</label>
+                                        <select id="productType" class="form-control">
+                                            <option>Select Product Name</option>
+                                            <option>Product Name 1</option>
+                                            <option>Product Name 2</option>
+                                            <option>Product Name 3</option>
+                                            <option class="newProductName">"Add New Product Name"</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 newOrderAddCustomProductName">
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput7">New Product Name</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput7"
+                                            placeholder="Enter New Product Name">
                                     </div>
                                 </div>
                             </div>
@@ -630,6 +658,44 @@
                 <div class="modal-body">
                     <form>
                         <div class="row">
+                            <div class="col-md-6 selectProductType">
+                                <div class="form-group">
+                                    <label for="productType">Product Type</label>
+                                    <select id="productType" class="form-control">
+                                        <option>Select Product Type</option>
+                                        <option>Product Type 1</option>
+                                        <option>Product Type 2</option>
+                                        <option>Product Type 3</option>
+                                        <option class="newProductType">"Add New Product Type"</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 addCustomProductType">
+                                <div class="form-group">
+                                    <label for="formGroupaddCustomProductType">New Product Type</label>
+                                    <input type="text" class="form-control" id="formGroupaddCustomProductType"
+                                        placeholder="Enter New Product Type">
+                                </div>
+                            </div>
+                            <div class="col-md-6 selectProductName">
+                                <div class="form-group">
+                                    <label for="productType">Product Name</label>
+                                    <select id="productType" class="form-control">
+                                        <option>Select Product Name</option>
+                                        <option>Product Name 1</option>
+                                        <option>Product Name 2</option>
+                                        <option>Product Name 3</option>
+                                        <option class="newProductName">"Add New Product Name"</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 addCustomProductName">
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput7">New Product Name</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput7"
+                                        placeholder="Enter New Product Name">
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="formGroupExampleInput6">Serial Number</label>
@@ -637,15 +703,6 @@
                                         placeholder="Enter Serial Number">
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="formGroupExampleInput7">Product Name</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput7"
-                                        placeholder="Enter Product Name">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="quantity-2">Quantity</label>
@@ -1710,6 +1767,44 @@
             $(".product-item:last").clone().insertAfter(".product-item:last");
             $(".product-item:last #borderTop").css("display", "block");
         }
+    </script>
+    <script>
+        $( ".selectProductType select" )
+            .change(function() {
+                var str = "";
+                    $( ".selectProductType select .newProductType:selected" ).each(function() {
+                    $(".addCustomProductType").toggle();
+                    $(".selectProductType").toggle();
+                });
+            })
+            .trigger( "change" );
+        $( ".selectProductName select" )
+            .change(function() {
+                var str = "";
+                    $( ".selectProductName select .newProductName:selected" ).each(function() {
+                    $(".addCustomProductName").toggle();
+                    $(".selectProductName").toggle();
+                });
+            })
+            .trigger( "change" );
+        $( ".newOrderSelectProductType select" )
+            .change(function() {
+                var str = "";
+                    $( ".newOrderSelectProductType select .newProductType:selected" ).each(function() {
+                    $(".newOrderAddCustomProductType").toggle();
+                    $(".newOrderSelectProductType").toggle();
+                });
+            })
+            .trigger( "change" );
+        $( ".newOrderSelectProductName select" )
+            .change(function() {
+                var str = "";
+                    $( ".newOrderSelectProductName select .newProductName:selected" ).each(function() {
+                    $(".newOrderAddCustomProductName").toggle();
+                    $(".newOrderSelectProductName").toggle();
+                });
+            })
+            .trigger( "change" );
     </script>
 </body>
 
