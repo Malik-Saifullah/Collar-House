@@ -1,0 +1,51 @@
+/*=======================================================
+                reset default setting
+=======================================================*/
+*:focus{
+    border: none;
+    outline: none;
+}
+
+.form-control{
+    background: #f1f1f1;
+}
+
+.form-control:focus,.form-control:focus-visible {
+    color: #000000;
+    background-color: #fff;
+    border-color: #000000;
+    outline: 0;
+    box-shadow: unset;
+}
+
+.btn:focus{
+    box-shadow: unset;
+}
+
+.modal input,
+.modal select,
+.new-order-detail input,
+.new-order-detail select {
+    background-color: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid #272727 !important;
+    border-radius: 0 !important;
+    margin-bottom: 25px !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.1px;
+}
+
+.modal #collapseExample {
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-name {
+        display: none;
+    }
+}
+.newOrderAddCustomProductType,.newOrderAddCustomProductName,
+.addCustomProductType,.addCustomProductName{
+    display: none;
+}

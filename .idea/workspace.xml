@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1bbdfe56-73c4-443d-b457-18bc143a8478" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/admin/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/billing-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/billing-history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/invoice.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/invoice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/ledger.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/ledger.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/stock-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/stock-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/billing-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/billing-history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/client.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/invoice.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/invoice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/ledger.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/ledger.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/stock-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/stock-list.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1yJeUAbNzkJBTgasj5M21VZUcVr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Works" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bbdfe56-73c4-443d-b457-18bc143a8478" name="Changes" comment="" />
+      <created>1631974136291</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631974136291</updated>
+      <workItem from="1631974139488" duration="28000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
