@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bbdfe56-73c4-443d-b457-18bc143a8478" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/billing-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/billing-history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/invoice.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/invoice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/ledger.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/ledger.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/stock-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/stock-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operator/billing-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/billing-history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operator/client.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/client.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operator/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operator/invoice.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/invoice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operator/ledger.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/ledger.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operator/stock-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/operator/stock-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/scss/vendor/_fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/scss/vendor/_mixins.scss" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631974136291</updated>
       <workItem from="1631974139488" duration="28000" />
+      <workItem from="1632232186295" duration="1608000" />
     </task>
     <servers />
   </component>
