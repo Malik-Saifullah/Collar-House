@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="./assets/images/fav-icon.png" type="image/x-icon">
-    <title>Stock Inventory | Collar House</title>
+    <link rel="shortcut icon" href="assets/images/fav-icon.png" type="image/x-icon">
+    <title>Customer Invoice Status | Collar House</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="assets\styles\css\themes\lite-purple.min.css">
     <link rel="stylesheet" href="assets\styles\vendor\perfect-scrollbar.css">
@@ -215,121 +215,1069 @@
                     <li><a href="./admin.html">Dashboard</a></li>
                     <li>Stock Inventory</li>
                 </ul>
-                <button type="button" class="btn btn-primary ml-auto text-uppercase" onclick="history.back()">Back</button>
+                <button type="button" class="btn btn-back btn-primary ml-auto" onclick="history.back()">Back</button>
             </div>
             <div class="separator-breadcrumb border-top"></div>
 
-            <div class="card">
-                <div class="card-body">
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-6 ml-auto">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <span class="input-group-text">Search</span>
-                                        </div>
-                                        <input type="search" placeholder="Search" class="form-control">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card text-left">
+                        <div class="card-body">
+                            <ul class="nav" id="myPillTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-icon-pill" data-toggle="pill" href="#homePIll" role="tab" aria-controls="homePIll" aria-selected="true">
+                                        Brand 1
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-icon-pill" data-toggle="pill" href="#profilePIll" role="tab" aria-controls="profilePIll" aria-selected="false">
+                                        Brand 2
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="contact-icon-pill" data-toggle="pill" href="#contactPIll" role="tab" aria-controls="contactPIll" aria-selected="false">
+                                        Brand 3
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="brand-4-pill" data-toggle="pill" href="#brand4" role="tab" aria-controls="brand4" aria-selected="false">
+                                        Brand 4
+                                    </a>
+                                </li>
+                                <li class="nav-item filter-search-box ml-auto">
+                                    <input type="search" placeholder="Search by Invoice Number/amount">
+                                </li>
+                            </ul>
+                            <div class="tab-content p-0" id="myPillTabContent">
+                                <div class="tab-pane fade show active" id="homePIll" role="tabpanel" aria-labelledby="home-icon-pill">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="filter-by-invoice-number">
+                                                            <label class="filter-title d-block">Invoice Number:</label>
+                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
+                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Product</option>
+                                                            <option value="">Product 1</option>
+                                                            <option value="">Product 2</option>
+                                                            <option value="">Product 3</option>
+                                                            <option value="">Product 4</option>
+                                                            <option value="">Product 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Shape</option>
+                                                            <option value="">Shape 1</option>
+                                                            <option value="">Shape 2</option>
+                                                            <option value="">Shape 3</option>
+                                                            <option value="">Shape 4</option>
+                                                            <option value="">Shape 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Size</option>
+                                                            <option value="">Size 1</option>
+                                                            <option value="">Size 2</option>
+                                                            <option value="">Size 3</option>
+                                                            <option value="">Size 4</option>
+                                                            <option value="">Size 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Material</option>
+                                                            <option value="">Material 1</option>
+                                                            <option value="">Material 2</option>
+                                                            <option value="">Material 3</option>
+                                                            <option value="">Material 4</option>
+                                                            <option value="">Material 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td colspan="2">
+                                                        <div class="filter-by-invoice-number">
+                                                            <label class="filter-title d-block text-right">Filter Result</label>
+                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="bg-gray-300">
+                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">Shape</th>
+                                                    <th scope="col">Size</th>
+                                                    <th scope="col">Material</th>
+                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
+                                                    <th scope="col">Total Quantity</th>
+                                                    <th scope="col" class="text-right">Action</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
+                                    <nav aria-label="navigation">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="btn-prev" href="#">
+                                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7.61565 14.8844C7.36208 14.891 7.15649 14.7906 6.98516 14.6164C4.76471 12.4464 2.54427 10.283 0.330687 8.11297C-0.114772 7.67761 -0.107918 7.21547 0.337541 6.77342C2.54427 4.61006 4.75101 2.4534 6.9646 0.296739C7.35523 -0.0850305 7.86237 -0.0984259 8.27356 0.256553C8.4723 0.430693 8.65734 0.631624 8.82867 0.839253C9.07539 1.14735 9.04797 1.5693 8.78755 1.8774C8.73272 1.94438 8.66419 2.00465 8.60251 2.06493C6.88236 3.75276 5.16905 5.44058 3.4489 7.1351C3.1268 7.44989 3.1268 7.44989 3.45575 7.77808C5.1485 9.43242 6.84124 11.0867 8.52713 12.7411C8.65049 12.8683 8.76699 13.0023 8.86979 13.1496C8.95888 13.2769 9 13.4309 9 13.5917C8.98629 14.1007 8.15706 14.891 7.61565 14.8844Z" fill="black"/>
+                                                    </svg>                                                
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link underline" href="#">Previous</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link active" href="#">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">4</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link underline" href="#">Next</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="btn-next" href="#">
+                                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.38435 14.8844C1.63792 14.891 1.84351 14.7906 2.01484 14.6164C4.23529 12.4464 6.45573 10.283 8.66931 8.11297C9.11477 7.67761 9.10792 7.21547 8.66246 6.77342C6.45573 4.61006 4.24899 2.4534 2.0354 0.296739C1.64477 -0.0850305 1.13763 -0.0984259 0.72644 0.256553C0.527698 0.430693 0.342661 0.631624 0.17133 0.839253C-0.0753851 1.14735 -0.0479717 1.5693 0.21245 1.8774C0.267276 1.94438 0.335807 2.00465 0.397486 2.06493C2.11764 3.75276 3.83095 5.44058 5.5511 7.1351C5.8732 7.44989 5.8732 7.44989 5.54425 7.77808C3.8515 9.43242 2.15876 11.0867 0.472872 12.7411C0.349514 12.8683 0.23301 13.0023 0.130212 13.1496C0.0411196 13.2769 0 13.4309 0 13.5917C0.0137062 14.1007 0.842944 14.891 1.38435 14.8844Z" fill="black"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">Sort By</span>
-                                        </div>
-                                        <select id="customerNameList" class="form-control">
-                                            <option>Default</option>
-                                            <option>Ascending</option>
-                                            <option>Descending</option>
-                                            <option>Alphabetical</option>
-                                        </select>
+                                <div class="tab-pane fade" id="profilePIll" role="tabpanel" aria-labelledby="profile-icon-pill">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="filter-by-invoice-number">
+                                                            <label class="filter-title d-block">Invoice Number:</label>
+                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
+                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Product</option>
+                                                            <option value="">Product 1</option>
+                                                            <option value="">Product 2</option>
+                                                            <option value="">Product 3</option>
+                                                            <option value="">Product 4</option>
+                                                            <option value="">Product 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Shape</option>
+                                                            <option value="">Shape 1</option>
+                                                            <option value="">Shape 2</option>
+                                                            <option value="">Shape 3</option>
+                                                            <option value="">Shape 4</option>
+                                                            <option value="">Shape 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Size</option>
+                                                            <option value="">Size 1</option>
+                                                            <option value="">Size 2</option>
+                                                            <option value="">Size 3</option>
+                                                            <option value="">Size 4</option>
+                                                            <option value="">Size 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Material</option>
+                                                            <option value="">Material 1</option>
+                                                            <option value="">Material 2</option>
+                                                            <option value="">Material 3</option>
+                                                            <option value="">Material 4</option>
+                                                            <option value="">Material 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td colspan="2">
+                                                        <div class="filter-by-invoice-number">
+                                                            <label class="filter-title d-block text-right">Filter Result</label>
+                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="bg-gray-300">
+                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">Shape</th>
+                                                    <th scope="col">Size</th>
+                                                    <th scope="col">Material</th>
+                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
+                                                    <th scope="col">Total Quantity</th>
+                                                    <th scope="col" class="text-right">Action</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
+                                    <nav aria-label="navigation">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="btn-prev" href="#">
+                                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7.61565 14.8844C7.36208 14.891 7.15649 14.7906 6.98516 14.6164C4.76471 12.4464 2.54427 10.283 0.330687 8.11297C-0.114772 7.67761 -0.107918 7.21547 0.337541 6.77342C2.54427 4.61006 4.75101 2.4534 6.9646 0.296739C7.35523 -0.0850305 7.86237 -0.0984259 8.27356 0.256553C8.4723 0.430693 8.65734 0.631624 8.82867 0.839253C9.07539 1.14735 9.04797 1.5693 8.78755 1.8774C8.73272 1.94438 8.66419 2.00465 8.60251 2.06493C6.88236 3.75276 5.16905 5.44058 3.4489 7.1351C3.1268 7.44989 3.1268 7.44989 3.45575 7.77808C5.1485 9.43242 6.84124 11.0867 8.52713 12.7411C8.65049 12.8683 8.76699 13.0023 8.86979 13.1496C8.95888 13.2769 9 13.4309 9 13.5917C8.98629 14.1007 8.15706 14.891 7.61565 14.8844Z" fill="black"/>
+                                                    </svg>                                                
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link underline" href="#">Previous</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link active" href="#">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">4</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link underline" href="#">Next</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="btn-next" href="#">
+                                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.38435 14.8844C1.63792 14.891 1.84351 14.7906 2.01484 14.6164C4.23529 12.4464 6.45573 10.283 8.66931 8.11297C9.11477 7.67761 9.10792 7.21547 8.66246 6.77342C6.45573 4.61006 4.24899 2.4534 2.0354 0.296739C1.64477 -0.0850305 1.13763 -0.0984259 0.72644 0.256553C0.527698 0.430693 0.342661 0.631624 0.17133 0.839253C-0.0753851 1.14735 -0.0479717 1.5693 0.21245 1.8774C0.267276 1.94438 0.335807 2.00465 0.397486 2.06493C2.11764 3.75276 3.83095 5.44058 5.5511 7.1351C5.8732 7.44989 5.8732 7.44989 5.54425 7.77808C3.8515 9.43242 2.15876 11.0867 0.472872 12.7411C0.349514 12.8683 0.23301 13.0023 0.130212 13.1496C0.0411196 13.2769 0 13.4309 0 13.5917C0.0137062 14.1007 0.842944 14.891 1.38435 14.8844Z" fill="black"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="tab-pane fade" id="contactPIll" role="tabpanel" aria-labelledby="contact-icon-pill">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="filter-by-invoice-number">
+                                                            <label class="filter-title d-block">Invoice Number:</label>
+                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
+                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Product</option>
+                                                            <option value="">Product 1</option>
+                                                            <option value="">Product 2</option>
+                                                            <option value="">Product 3</option>
+                                                            <option value="">Product 4</option>
+                                                            <option value="">Product 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Shape</option>
+                                                            <option value="">Shape 1</option>
+                                                            <option value="">Shape 2</option>
+                                                            <option value="">Shape 3</option>
+                                                            <option value="">Shape 4</option>
+                                                            <option value="">Shape 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Size</option>
+                                                            <option value="">Size 1</option>
+                                                            <option value="">Size 2</option>
+                                                            <option value="">Size 3</option>
+                                                            <option value="">Size 4</option>
+                                                            <option value="">Size 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Material</option>
+                                                            <option value="">Material 1</option>
+                                                            <option value="">Material 2</option>
+                                                            <option value="">Material 3</option>
+                                                            <option value="">Material 4</option>
+                                                            <option value="">Material 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td colspan="2">
+                                                        <div class="filter-by-invoice-number">
+                                                            <label class="filter-title d-block text-right">Filter Result</label>
+                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="bg-gray-300">
+                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">Shape</th>
+                                                    <th scope="col">Size</th>
+                                                    <th scope="col">Material</th>
+                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
+                                                    <th scope="col">Total Quantity</th>
+                                                    <th scope="col" class="text-right">Action</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav aria-label="navigation">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="btn-prev" href="#">
+                                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7.61565 14.8844C7.36208 14.891 7.15649 14.7906 6.98516 14.6164C4.76471 12.4464 2.54427 10.283 0.330687 8.11297C-0.114772 7.67761 -0.107918 7.21547 0.337541 6.77342C2.54427 4.61006 4.75101 2.4534 6.9646 0.296739C7.35523 -0.0850305 7.86237 -0.0984259 8.27356 0.256553C8.4723 0.430693 8.65734 0.631624 8.82867 0.839253C9.07539 1.14735 9.04797 1.5693 8.78755 1.8774C8.73272 1.94438 8.66419 2.00465 8.60251 2.06493C6.88236 3.75276 5.16905 5.44058 3.4489 7.1351C3.1268 7.44989 3.1268 7.44989 3.45575 7.77808C5.1485 9.43242 6.84124 11.0867 8.52713 12.7411C8.65049 12.8683 8.76699 13.0023 8.86979 13.1496C8.95888 13.2769 9 13.4309 9 13.5917C8.98629 14.1007 8.15706 14.891 7.61565 14.8844Z" fill="black"/>
+                                                    </svg>                                                
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link underline" href="#">Previous</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link active" href="#">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">4</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link underline" href="#">Next</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="btn-next" href="#">
+                                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.38435 14.8844C1.63792 14.891 1.84351 14.7906 2.01484 14.6164C4.23529 12.4464 6.45573 10.283 8.66931 8.11297C9.11477 7.67761 9.10792 7.21547 8.66246 6.77342C6.45573 4.61006 4.24899 2.4534 2.0354 0.296739C1.64477 -0.0850305 1.13763 -0.0984259 0.72644 0.256553C0.527698 0.430693 0.342661 0.631624 0.17133 0.839253C-0.0753851 1.14735 -0.0479717 1.5693 0.21245 1.8774C0.267276 1.94438 0.335807 2.00465 0.397486 2.06493C2.11764 3.75276 3.83095 5.44058 5.5511 7.1351C5.8732 7.44989 5.8732 7.44989 5.54425 7.77808C3.8515 9.43242 2.15876 11.0867 0.472872 12.7411C0.349514 12.8683 0.23301 13.0023 0.130212 13.1496C0.0411196 13.2769 0 13.4309 0 13.5917C0.0137062 14.1007 0.842944 14.891 1.38435 14.8844Z" fill="black"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="tab-pane fade" id="brand4" role="tabpanel" aria-labelledby="contact-icon-pill">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="filter-by-invoice-number">
+                                                            <label class="filter-title d-block">Invoice Number:</label>
+                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
+                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Product</option>
+                                                            <option value="">Product 1</option>
+                                                            <option value="">Product 2</option>
+                                                            <option value="">Product 3</option>
+                                                            <option value="">Product 4</option>
+                                                            <option value="">Product 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Shape</option>
+                                                            <option value="">Shape 1</option>
+                                                            <option value="">Shape 2</option>
+                                                            <option value="">Shape 3</option>
+                                                            <option value="">Shape 4</option>
+                                                            <option value="">Shape 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Size</option>
+                                                            <option value="">Size 1</option>
+                                                            <option value="">Size 2</option>
+                                                            <option value="">Size 3</option>
+                                                            <option value="">Size 4</option>
+                                                            <option value="">Size 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <label class="filter-title d-block mb-3"></label>
+                                                        <select>
+                                                            <option value="">Select Material</option>
+                                                            <option value="">Material 1</option>
+                                                            <option value="">Material 2</option>
+                                                            <option value="">Material 3</option>
+                                                            <option value="">Material 4</option>
+                                                            <option value="">Material 5</option>
+                                                        </select>
+                                                    </td>
+                                                    <td colspan="2">
+                                                        <div class="filter-by-invoice-number">
+                                                            <label class="filter-title d-block text-right">Filter Result</label>
+                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="bg-gray-300">
+                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">Shape</th>
+                                                    <th scope="col">Size</th>
+                                                    <th scope="col">Material</th>
+                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
+                                                    <th scope="col">Total Quantity</th>
+                                                    <th scope="col" class="text-right">Action</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>Product 1</td>
+                                                    <td>Shape 1</td>
+                                                    <td>Size 1</td>
+                                                    <td>Material 1</td>
+                                                    <td class="text-center">32</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav aria-label="navigation">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="btn-prev" href="#">
+                                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7.61565 14.8844C7.36208 14.891 7.15649 14.7906 6.98516 14.6164C4.76471 12.4464 2.54427 10.283 0.330687 8.11297C-0.114772 7.67761 -0.107918 7.21547 0.337541 6.77342C2.54427 4.61006 4.75101 2.4534 6.9646 0.296739C7.35523 -0.0850305 7.86237 -0.0984259 8.27356 0.256553C8.4723 0.430693 8.65734 0.631624 8.82867 0.839253C9.07539 1.14735 9.04797 1.5693 8.78755 1.8774C8.73272 1.94438 8.66419 2.00465 8.60251 2.06493C6.88236 3.75276 5.16905 5.44058 3.4489 7.1351C3.1268 7.44989 3.1268 7.44989 3.45575 7.77808C5.1485 9.43242 6.84124 11.0867 8.52713 12.7411C8.65049 12.8683 8.76699 13.0023 8.86979 13.1496C8.95888 13.2769 9 13.4309 9 13.5917C8.98629 14.1007 8.15706 14.891 7.61565 14.8844Z" fill="black"/>
+                                                    </svg>                                                
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link underline" href="#">Previous</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link active" href="#">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link" href="#">4</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="pagination-link underline" href="#">Next</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="btn-next" href="#">
+                                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.38435 14.8844C1.63792 14.891 1.84351 14.7906 2.01484 14.6164C4.23529 12.4464 6.45573 10.283 8.66931 8.11297C9.11477 7.67761 9.10792 7.21547 8.66246 6.77342C6.45573 4.61006 4.24899 2.4534 2.0354 0.296739C1.64477 -0.0850305 1.13763 -0.0984259 0.72644 0.256553C0.527698 0.430693 0.342661 0.631624 0.17133 0.839253C-0.0753851 1.14735 -0.0479717 1.5693 0.21245 1.8774C0.267276 1.94438 0.335807 2.00465 0.397486 2.06493C2.11764 3.75276 3.83095 5.44058 5.5511 7.1351C5.8732 7.44989 5.8732 7.44989 5.54425 7.77808C3.8515 9.43242 2.15876 11.0867 0.472872 12.7411C0.349514 12.8683 0.23301 13.0023 0.130212 13.1496C0.0411196 13.2769 0 13.4309 0 13.5917C0.0137062 14.1007 0.842944 14.891 1.38435 14.8844Z" fill="black"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 table-responsive">
-                            <table class="table table-hover mb-4">
-                                <thead class="bg-gray-300">
-                                    <tr>
-                                        <th scope="col" class="text-center">#</th>
-                                        <th scope="col">Serial Number</th>
-                                        <th scope="col" class="">Product Name</th>
-                                        <th scope="col" class="text-center">Quantity</th>
-                                        <th scope="col" class="text-center">Price Per Quantity (Rs)</th>
-                                        <th scope="col" class="text-center">Total Price (Rs)</th>
-                                        <th scope="col" class="text-center">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row" class="text-center">1</th>
-                                        <td>Q-11</td>
-                                        <td class="">Tiger Nixon</td>
-                                        <td class="text-center">22</td>
-                                        <td class="text-center">1600</td>
-                                        <td class="text-center">4600</td>
-                                        <td class="text-center">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                data-target="#stockInventoryUpdateModal">Update</button>
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
-                                                Delete
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" class="text-center">2</th>
-                                        <td>Q-11</td>
-                                        <td class="">Tiger Nixon</td>
-                                        <td class="text-center">22</td>
-                                        <td class="text-center">1600</td>
-                                        <td class="text-center">4600</td>
-                                        <td class="text-center">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                data-target="#stockInventoryUpdateModal">Update</button>
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
-                                                Delete
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" class="text-center">3</th>
-                                        <td>Q-11</td>
-                                        <td class="">Tiger Nixon</td>
-                                        <td class="text-center">22</td>
-                                        <td class="text-center">1600</td>
-                                        <td class="text-center">4600</td>
-                                        <td class="text-center">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                data-target="#stockInventoryUpdateModal">Update</button>
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
-                                                Delete
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <nav aria-label="Page navigation example" style="float: right;">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <!-- end of row -->
 
             <!-- Footer Start -->
             <div class="flex-grow-1"></div>
