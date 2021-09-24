@@ -1957,7 +1957,8 @@ a.pagination-link.active {
   text-align: left;
 }
 
-#myPillTabContent .filter-title {
+#myPillTabContent .filter-title,
+#inventoryContent .filter-title {
   font-family: 'Nunito', sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -1965,7 +1966,9 @@ a.pagination-link.active {
   text-align: left;
   margin-bottom: 0px;
 }
-#myPillTabContent input, #myPillTabContent select {
+#myPillTabContent input, #myPillTabContent select,
+#inventoryContent input,
+#inventoryContent select {
   background: transparent;
   border: none;
   font-family: 'Nunito', sans-serif;
@@ -1974,6 +1977,7 @@ a.pagination-link.active {
   line-height: 16px;
   text-align: left;
 }
-#myPillTabContent tr:last-child td {
+#myPillTabContent tr:last-child td,
+#inventoryContent tr:last-child td {
   border-top: 1px solid #dee2e6;
 }
