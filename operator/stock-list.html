@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="./assets/images/fav-icon.png" type="image/x-icon">
-    <title>Stock Inventory |Collar House</title>
+    <link rel="shortcut icon" href="assets/images/fav-icon.png" type="image/x-icon">
+    <title>Customer Invoice Status | Collar House</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="assets\styles\css\themes\lite-purple.min.css">
     <link rel="stylesheet" href="assets\styles\vendor\perfect-scrollbar.css">
@@ -36,7 +36,7 @@
 
             <div class="header-part-right">
 
-                <div class="mr-2" style="width: 8px;height: 8px;background: orange;border-radius: 30px;"></div>
+                <div class="mr-2" style="width: 8px;height: 8px;background: green;border-radius: 30px;"></div>
 
                 <!-- Full screen toggle -->
                 <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen=""></i>
@@ -145,6 +145,27 @@
                         </a>
                         <div class="triangle"></div>
                     </li>
+                    <li class="nav-item" type="button" data-toggle="modal" data-target="#newProduct">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Checkout-Basket"></i>
+                            <span class="nav-text">Add Product</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" type="button" data-toggle="modal" data-target="#newCustomer">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Add-User"></i>
+                            <span class="nav-text">Add Customer</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-hold" href="./employee.html">
+                            <i class="nav-icon i-Administrator"></i>
+                            <span class="nav-text">Employee's info</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-item-hold" href="./billing-history.html">
                             <i class="nav-icon i-Money-2"></i>
@@ -194,7 +215,7 @@
                     <li><a href="./client.html">Dashboard</a></li>
                     <li>Stock Inventory</li>
                 </ul>
-                <button type="button" class="btn btn-primary ml-auto text-uppercase" onclick="history.back()">Back</button>
+                <button type="button" class="btn btn-back btn-primary ml-auto" onclick="history.back()">Back</button>
             </div>
             <div class="separator-breadcrumb border-top"></div>
 
@@ -205,50 +226,43 @@
                             <ul class="nav" id="myPillTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-icon-pill" data-toggle="pill" href="#homePIll" role="tab" aria-controls="homePIll" aria-selected="true">
-                                        Brand 1
+                                        Madina
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-icon-pill" data-toggle="pill" href="#profilePIll" role="tab" aria-controls="profilePIll" aria-selected="false">
-                                        Brand 2
+                                        Pak
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="contact-icon-pill" data-toggle="pill" href="#contactPIll" role="tab" aria-controls="contactPIll" aria-selected="false">
-                                        Brand 3
+                                        Anarkali
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="brand-4-pill" data-toggle="pill" href="#brand4" role="tab" aria-controls="brand4" aria-selected="false">
-                                        Brand 4
+                                        New Madina
                                     </a>
                                 </li>
                                 <li class="nav-item filter-search-box ml-auto">
-                                    <input type="search" placeholder="Search by Name/Shape/Material/Quantity">
+                                    <input type="search" placeholder="Search ">
                                 </li>
                             </ul>
-                            <div class="tab-content p-0" id="myPillTabContent">
+                            <div class="tab-content p-0" id="inventoryContent">
                                 <div class="tab-pane fade show active" id="homePIll" role="tabpanel" aria-labelledby="home-icon-pill">
                                     <div class="table-responsive">
                                         <table class="table table-hover mb-0">
                                             <thead>
                                                 <tr>
                                                     <td colspan="2">
-                                                        <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block">Invoice Number:</label>
-                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
-                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
-                                                        </div>
-                                                    </td>
-                                                    <td>
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Product</option>
-                                                            <option value="">Product 1</option>
-                                                            <option value="">Product 2</option>
-                                                            <option value="">Product 3</option>
-                                                            <option value="">Product 4</option>
-                                                            <option value="">Product 5</option>
+                                                            <option value="">Cuff</option>
+                                                            <option value="">Ban</option>
+                                                            <option value="">Collars</option>
+                                                            <option value="">Patti</option>
+                                                            
                                                         </select>
                                                     </td>
                                                     <td>
@@ -266,28 +280,27 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Size</option>
-                                                            <option value="">Size 1</option>
-                                                            <option value="">Size 2</option>
-                                                            <option value="">Size 3</option>
-                                                            <option value="">Size 4</option>
-                                                            <option value="">Size 5</option>
+                                                            <option value=""> 1</option>
+                                                            <option value=""> 2</option>
+                                                            <option value=""> 3</option>
+                                                            <option value=""> 4</option>
+                                                            <option value=""> 5</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Material</option>
-                                                            <option value="">Material 1</option>
-                                                            <option value="">Material 2</option>
-                                                            <option value="">Material 3</option>
-                                                            <option value="">Material 4</option>
-                                                            <option value="">Material 5</option>
+                                                            <option value="">Regular</option>
+                                                            <option value="">Soft</option>
+                                                            <option value="">Hard</option>
+                                                            <option value="">DD</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block text-right">Filter Result</label>
-                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <label class="filter-title d-block text-right">Available Quantity</label>
+                                                            <!-- <p class="filter-title text-right">Available Quantity</p> -->
                                                             <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
                                                         </div>
                                                     </td>
@@ -295,103 +308,155 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="bg-gray-300">
-                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Sr.</th>
                                                     <th scope="col">Product Name</th>
                                                     <th scope="col">Shape</th>
                                                     <th scope="col">Size</th>
                                                     <th scope="col">Material</th>
-                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
-                                                    <th scope="col" class="text-right">Total Quantity</th>
+                                                    <th scope="col" class="text-center">Price Per Qty.</th>
+                                                    <th scope="col">Total Quantity</th>
+                                                    <th scope="col" class="text-center">Action</th>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Product 1</td>
+                                                    <td>Madina patti</td>
                                                     <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td> 1</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina calf</td>
+                                                    <td>Shape 2</td>
+                                                    <td>2</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina collars</td>
+                                                    <td>Shape 3</td>
+                                                    <td> 3</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina Ban</td>
+                                                    <td>Shape 4</td>
+                                                    <td>4</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina Patti</td>
+                                                    <td>Shape 5</td>
+                                                    <td> 5</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina collars</td>
+                                                    <td>Shape 6</td>
+                                                    <td> 6</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina ban</td>
+                                                    <td>Shape 7</td>
+                                                    <td>7</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina collars</td>
+                                                    <td>Shape </td>
+                                                    <td>8</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
-                                                <tr>
+                                                <tr>  
                                                     <td>9</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina patti</td>
+                                                    <td>Shape 9</td>
+                                                    <td>9</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
-                                                <tr>
+                                                <tr>  
                                                     <td>10</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina Ban</td>
+                                                    <td>Shape 10</td>
+                                                    <td>10</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -439,21 +504,14 @@
                                             <thead>
                                                 <tr>
                                                     <td colspan="2">
-                                                        <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block">Invoice Number:</label>
-                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
-                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
-                                                        </div>
-                                                    </td>
-                                                    <td>
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Product</option>
-                                                            <option value="">Product 1</option>
-                                                            <option value="">Product 2</option>
-                                                            <option value="">Product 3</option>
-                                                            <option value="">Product 4</option>
-                                                            <option value="">Product 5</option>
+                                                            <option value="">Cuff</option>
+                                                            <option value="">Ban</option>
+                                                            <option value="">Collars</option>
+                                                            <option value="">Patti</option>
+                                                            
                                                         </select>
                                                     </td>
                                                     <td>
@@ -471,28 +529,27 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Size</option>
-                                                            <option value="">Size 1</option>
-                                                            <option value="">Size 2</option>
-                                                            <option value="">Size 3</option>
-                                                            <option value="">Size 4</option>
-                                                            <option value="">Size 5</option>
+                                                            <option value=""> 1</option>
+                                                            <option value=""> 2</option>
+                                                            <option value=""> 3</option>
+                                                            <option value=""> 4</option>
+                                                            <option value=""> 5</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Material</option>
-                                                            <option value="">Material 1</option>
-                                                            <option value="">Material 2</option>
-                                                            <option value="">Material 3</option>
-                                                            <option value="">Material 4</option>
-                                                            <option value="">Material 5</option>
+                                                            <option value="">Regular</option>
+                                                            <option value="">Soft</option>
+                                                            <option value="">Hard</option>
+                                                            <option value="">DD</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block text-right">Filter Result</label>
-                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <label class="filter-title d-block text-right">Available Quantity</label>
+                                                            <!-- <p class="filter-title text-right">Available Quantity</p> -->
                                                             <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
                                                         </div>
                                                     </td>
@@ -500,103 +557,154 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="bg-gray-300">
-                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Sr.</th>
                                                     <th scope="col">Product Name</th>
                                                     <th scope="col">Shape</th>
                                                     <th scope="col">Size</th>
                                                     <th scope="col">Material</th>
-                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
-                                                    <th scope="col" class="text-right">Total Quantity</th>
+                                                    <th scope="col" class="text-center">Price Per Qty.</th>
+                                                    <th scope="col">Total Quantity</th>
+                                                    <th scope="col" class="text-right">Action</th>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Product 1</td>
+                                                    <td>Pak patti</td>
                                                     <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td> 1</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak calf</td>
+                                                    <td>Shape 2</td>
+                                                    <td>2</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak collars</td>
+                                                    <td>Shape 3</td>
+                                                    <td> 3</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak Ban</td>
+                                                    <td>Shape 4</td>
+                                                    <td>4</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak Patti</td>
+                                                    <td>Shape 5</td>
+                                                    <td> 5</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
-                                                <tr>
+                                                <tr> 
                                                     <td>6</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak collars</td>
+                                                    <td>Shape 6</td>
+                                                    <td> 6</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak ban</td>
+                                                    <td>Shape 7</td>
+                                                    <td>7</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak collars</td>
+                                                    <td>Shape </td>
+                                                    <td>8</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>9</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak patti</td>
+                                                    <td>Shape 9</td>
+                                                    <td>9</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak Ban</td>
+                                                    <td>Shape 10</td>
+                                                    <td>10</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -644,21 +752,14 @@
                                             <thead>
                                                 <tr>
                                                     <td colspan="2">
-                                                        <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block">Invoice Number:</label>
-                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
-                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
-                                                        </div>
-                                                    </td>
-                                                    <td>
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Product</option>
-                                                            <option value="">Product 1</option>
-                                                            <option value="">Product 2</option>
-                                                            <option value="">Product 3</option>
-                                                            <option value="">Product 4</option>
-                                                            <option value="">Product 5</option>
+                                                            <option value="">Cuff</option>
+                                                            <option value="">Ban</option>
+                                                            <option value="">Collars</option>
+                                                            <option value="">Patti</option>
+                                                            
                                                         </select>
                                                     </td>
                                                     <td>
@@ -676,28 +777,27 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Size</option>
-                                                            <option value="">Size 1</option>
-                                                            <option value="">Size 2</option>
-                                                            <option value="">Size 3</option>
-                                                            <option value="">Size 4</option>
-                                                            <option value="">Size 5</option>
+                                                            <option value=""> 1</option>
+                                                            <option value=""> 2</option>
+                                                            <option value=""> 3</option>
+                                                            <option value=""> 4</option>
+                                                            <option value=""> 5</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Material</option>
-                                                            <option value="">Material 1</option>
-                                                            <option value="">Material 2</option>
-                                                            <option value="">Material 3</option>
-                                                            <option value="">Material 4</option>
-                                                            <option value="">Material 5</option>
+                                                            <option value="">Regular</option>
+                                                            <option value="">Soft</option>
+                                                            <option value="">Hard</option>
+                                                            <option value="">DD</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block text-right">Filter Result</label>
-                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <label class="filter-title d-block text-right">Available Quantity</label>
+                                                            <!-- <p class="filter-title text-right">Available Quantity</p> -->
                                                             <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
                                                         </div>
                                                     </td>
@@ -705,103 +805,154 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="bg-gray-300">
-                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Sr.</th>
                                                     <th scope="col">Product Name</th>
                                                     <th scope="col">Shape</th>
                                                     <th scope="col">Size</th>
                                                     <th scope="col">Material</th>
-                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
-                                                    <th scope="col" class="text-right">Total Quantity</th>
+                                                    <th scope="col" class="text-center">Price Per Qty.</th>
+                                                    <th scope="col">Total Quantity</th>
+                                                    <th scope="col" class="text-right">Action</th>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Product 1</td>
+                                                    <td>Anarkali ban </td>
                                                     <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>1</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali cuff</td>
+                                                    <td>Shape 2</td>
+                                                    <td> 2</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali collars</td>
+                                                    <td>Shape 3</td>
+                                                    <td> 3</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali ban</td>
+                                                    <td>Shape 4</td>
+                                                    <td> 4</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali cuff</td>
+                                                    <td>Shape 5</td>
+                                                    <td> 5</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali patti</td>
+                                                    <td>Shape 6</td>
+                                                    <td>6 </td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali ban></td>
+                                                    <td>Shape 7</td>
+                                                    <td>7</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali cuff</td>
+                                                    <td>Shape 8</td>
+                                                    <td> 8</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>9</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali collars</td>
+                                                    <td>Shape 9</td>
+                                                    <td>9</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali cuff</td>
+                                                    <td>Shape 10</td>
+                                                    <td> 10</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -849,21 +1000,14 @@
                                             <thead>
                                                 <tr>
                                                     <td colspan="2">
-                                                        <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block">Invoice Number:</label>
-                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
-                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
-                                                        </div>
-                                                    </td>
-                                                    <td>
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Product</option>
-                                                            <option value="">Product 1</option>
-                                                            <option value="">Product 2</option>
-                                                            <option value="">Product 3</option>
-                                                            <option value="">Product 4</option>
-                                                            <option value="">Product 5</option>
+                                                            <option value="">Cuff</option>
+                                                            <option value="">Ban</option>
+                                                            <option value="">Collars</option>
+                                                            <option value="">Patti</option>
+                                                            
                                                         </select>
                                                     </td>
                                                     <td>
@@ -881,28 +1025,27 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Size</option>
-                                                            <option value="">Size 1</option>
-                                                            <option value="">Size 2</option>
-                                                            <option value="">Size 3</option>
-                                                            <option value="">Size 4</option>
-                                                            <option value="">Size 5</option>
+                                                            <option value=""> 1</option>
+                                                            <option value=""> 2</option>
+                                                            <option value=""> 3</option>
+                                                            <option value=""> 4</option>
+                                                            <option value=""> 5</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Material</option>
-                                                            <option value="">Material 1</option>
-                                                            <option value="">Material 2</option>
-                                                            <option value="">Material 3</option>
-                                                            <option value="">Material 4</option>
-                                                            <option value="">Material 5</option>
+                                                            <option value="">Regular</option>
+                                                            <option value="">Soft</option>
+                                                            <option value="">Hard</option>
+                                                            <option value="">DD</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block text-right">Filter Result</label>
-                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <label class="filter-title d-block text-right">Available Quantity</label>
+                                                            <!-- <p class="filter-title text-right">Available Quantity</p> -->
                                                             <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
                                                         </div>
                                                     </td>
@@ -910,103 +1053,154 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="bg-gray-300">
-                                                    <th scope="col">No#</th>
-                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">Sr.</th>
+                                                    <th scope="col">New MadinaName</th>
                                                     <th scope="col">Shape</th>
                                                     <th scope="col">Size</th>
                                                     <th scope="col">Material</th>
-                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
-                                                    <th scope="col" class="text-right">Total Quantity</th>
+                                                    <th scope="col" class="text-center">Price Per Qty</th>
+                                                    <th scope="col">Total Quantity</th>
+                                                    <th scope="col" class="text-right">Action</th>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Product 1</td>
+                                                    <td>New Madina ban</td>
                                                     <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td> 1</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina collars</td>
+                                                    <td>Shape 2</td>
+                                                    <td> 2</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina ban</td>
+                                                    <td>Shape 3</td>
+                                                    <td> 3</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina patti </td>
+                                                    <td>Shape 4</td>
+                                                    <td> 4</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina cuff</td>
+                                                    <td>Shape 5</td>
+                                                    <td>5</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina ban</td>
+                                                    <td>Shape 6</td>
+                                                    <td> 6</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina patti</td>
+                                                    <td>Shape 7</td>
+                                                    <td>7</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina collars</td>
+                                                    <td>Shape 8</td>
+                                                    <td>8</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>9</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina cuff</td>
+                                                    <td>Shape 9</td>
+                                                    <td> 9</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina cuff</td>
+                                                    <td>Shape 10</td>
+                                                    <td>10</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
-                                                    <td class="text-right">3231234</td>
+                                                    <td>3231234</td>
+                                                    <td class="text-right">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+                                                            Delete
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1053,7 +1247,6 @@
                     </div>
                 </div>
             </div>
-            <!-- end of row -->
 
             <!-- Footer Start -->
             <div class="flex-grow-1"></div>
@@ -2733,6 +2926,939 @@
         </div>
     </div>
 
+    <div class="modal fade" id="newProduct" tabindex="-1" role="dialog" aria-labelledby="newProductLabel"
+    style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newProductLabel">Add Product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="new-order-body-box">
+                    <div class="select-brand-box">
+                        <p class="new-order-title">Select Brand</p>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper d-flex">
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="new-madina-add-product" name="group1" value="1" type="radio">
+                                        <label for="new-madina-add-product">
+                                            <img src="./assets/images/brands/brand-01.png" alt="">
+                                            <p>New Madina</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="pak-add-product" name="group1" value="2" type="radio">
+                                        <label for="pak-add-product">
+                                            <img src="./assets/images/brands/brand-02.png" alt="">
+                                            <p>Pak</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="anarkali-add-product" name="group1" value="3" type="radio">
+                                        <label for="anarkali-add-product">
+                                            <img src="./assets/images/brands/brand-03.png" alt="">
+                                            <p>Anarkali</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="madina-add-product" name="group1" value="4" type="radio">
+                                        <label for="madina-add-product">
+                                            <img src="./assets/images/brands/brand-04.png" alt="">
+                                            <p>Madina</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-product-box fade">
+                        <p class="new-order-title">Select Product</p>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper d-flex">
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="madina-collars-add-product" name="group2" type="radio">
+                                        <label for="madina-collars-add-product">
+                                            <img src="./assets/images/select-product/select-product-01.png" alt="">
+                                            <p>Madina Collars</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="madina-calf-add-product" name="group2" type="radio">
+                                        <label for="madina-calf-add-product">
+                                            <img src="./assets/images/select-product/select-product-02.png" alt="">
+                                            <p>Madina Calf</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="madina-ban-add-product" name="group2" type="radio">
+                                        <label for="madina-ban-add-product">
+                                            <img src="./assets/images/select-product/select-product-03.png" alt="">
+                                            <p>Madina Ban</p>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- add new -->
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="add-new-product" name="group2" type="radio">
+                                        <label for="add-new-product" class="btn-add">
+                                            <div class="profile-img-box">
+                                                <div class="img-box">
+                                                    <div class="circle upload-button">
+                                                        <!-- User Profile Image -->
+                                                        <img class="profile-pic" src="">
+                                                        <!-- Default Image -->
+                                                        <!-- <i class="fa fa-user fa-5x"></i> -->
+                                                    </div>
+                                                    <input class="file-upload" type="file" accept="image/*" />
+                                                </div>
+                                            </div>
+                                            <input type="text" placeholder="Enter Name">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-shape-box fade">
+                        <p class="new-order-title">Select Shape</p>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper d-flex">
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="shape-01-add-product" name="group3" type="radio">
+                                        <label for="shape-01-add-product">
+                                            <img src="./assets/images/shape/shape-01.png" alt="">
+                                            <p>Shape 1</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="shape-02-add-product" name="group3" type="radio">
+                                        <label for="shape-02-add-product">
+                                            <img src="./assets/images/shape/shape-02.png" alt="">
+                                            <p>Shape 2</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="shape-03-add-product" name="group3" type="radio">
+                                        <label for="shape-03-add-product">
+                                            <img src="./assets/images/shape/shape-03.png" alt="">
+                                            <p>Shape 3</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="shape-04-add-product" name="group3" type="radio">
+                                        <label for="shape-04-add-product">
+                                            <img src="./assets/images/shape/shape-04.png" alt="">
+                                            <p>Shape 4</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="shape-05-add-product" name="group3" type="radio">
+                                        <label for="shape-05-add-product">
+                                            <img src="./assets/images/shape/shape-05.png" alt="">
+                                            <p>Shape 5</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="shape-06-add-product" name="group3" type="radio">
+                                        <label for="shape-06-add-product">
+                                            <img src="./assets/images/shape/shape-06.png" alt="">
+                                            <p>Shape 6</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="shape-07-add-product" name="group3" type="radio">
+                                        <label for="shape-07-add-product">
+                                            <img src="./assets/images/shape/shape-07.png" alt="">
+                                            <p>Shape 7</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="shape-08-add-product" name="group3" type="radio">
+                                        <label for="shape-08-add-product">
+                                            <img src="./assets/images/shape/shape-08.png" alt="">
+                                            <p>Shape 8</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <!-- add new -->
+                                <div class="swiper-slide">
+                                    <div class="new-order-card">
+                                        <input id="add-new-shape" name="group2" type="radio">
+                                        <label for="add-new-shape" class="btn-add">
+                                            <div class="profile-img-box">
+                                                <div class="img-box">
+                                                    <div class="circle upload-button-1">
+                                                        <!-- User Profile Image -->
+                                                        <img class="profile-pic-1" src="">
+                                                        <!-- Default Image -->
+                                                        <!-- <i class="fa fa-user fa-5x"></i> -->
+                                                    </div>
+                                                    <input class="file-upload-1" type="file" accept="image/*" />
+                                                </div>
+                                            </div>
+                                            <input type="text" placeholder="Enter Name">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-size-box fade">
+                        <p class="new-order-title">Select Size</p>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper d-flex">
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-17-add-product" name="group4" type="checkbox">
+                                        <label for="width-17-add-product">
+                                            <p>17''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-16-add-product" name="group4" type="checkbox">
+                                        <label for="width-16-add-product">
+                                            <p>16''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-15-add-product" name="group4" type="checkbox">
+                                        <label for="width-15-add-product">
+                                            <p>15''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-14-add-product" name="group4" type="checkbox">
+                                        <label for="width-14-add-product">
+                                            <p>14''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-13-add-product" name="group4" type="checkbox">
+                                        <label for="width-13-add-product">
+                                            <p>13''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-12-add-product" name="group4" type="checkbox">
+                                        <label for="width-12-add-product">
+                                            <p>12''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-11-add-product" name="group4" type="checkbox">
+                                        <label for="width-11-add-product">
+                                            <p>11''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-10-add-product" name="group4" type="checkbox">
+                                        <label for="width-10-add-product">
+                                            <p>10''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-09-add-product" name="group4" type="checkbox">
+                                        <label for="width-09-add-product">
+                                            <p>9''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-08-add-product" name="group4" type="checkbox">
+                                        <label for="width-08-add-product">
+                                            <p>8''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-07-add-product" name="group4" type="checkbox">
+                                        <label for="width-07-add-product">
+                                            <p>7''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-06-add-product" name="group4" type="checkbox">
+                                        <label for="width-06-add-product">
+                                            <p>6''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-05-add-product" name="group4" type="checkbox">
+                                        <label for="width-05-add-product">
+                                            <p>5''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-04-add-product" name="group4" type="checkbox">
+                                        <label for="width-04-add-product">
+                                            <p>4''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-03-add-product" name="group4" type="checkbox">
+                                        <label for="width-03-add-product">
+                                            <p>3''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-02-add-product" name="group4" type="checkbox">
+                                        <label for="width-02-add-product">
+                                            <p>2''</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="width-01-add-product" name="group4" type="checkbox">
+                                        <label for="width-01-add-product">
+                                            <p>1''</p>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- add new -->
+                                <div class="swiper-slide">
+                                    <div class="new-order-size-card">
+                                        <input id="add-size" name="group4" type="checkbox">
+                                        <label for="add-size" class="btn-add-size">
+                                            <input type="number" placeholder=" ? ''">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-order-detail fade">
+                        <table style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Quantity</th>
+                                    <th>Price Per Quantity</th>
+                                    <th>Add Category</th>
+                                    <th>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control" value="17''" disabled>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control" placeholder="00.00">
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control" placeholder="00.00">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" placeholder="Add Category">
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="add-another-product border-top border-dark pt-4 d-none">
+                        <div class="new-select-brand-box">
+                            <p class="new-order-title">Select Brand</p>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper d-flex">
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="new-madina-1" name="group5" value="1" type="radio">
+                                            <label for="new-madina-1">
+                                                <img src="./assets/images/brands/brand-01.png" alt="">
+                                                <p>New Madina</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="pak-1" name="group5" value="2" type="radio">
+                                            <label for="pak-1">
+                                                <img src="./assets/images/brands/brand-02.png" alt="">
+                                                <p>Pak</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="anarkali-1" name="group5" value="3" type="radio">
+                                            <label for="anarkali-1">
+                                                <img src="./assets/images/brands/brand-03.png" alt="">
+                                                <p>Anarkali</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="madina-1" name="group5" value="4" type="radio">
+                                            <label for="madina-1">
+                                                <img src="./assets/images/brands/brand-04.png" alt="">
+                                                <p>Madina</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-select-product-box fade">
+                            <p class="new-order-title">Select Product</p>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper d-flex">
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="madina-collars-1" name="group6" type="radio">
+                                            <label for="madina-collars-1">
+                                                <img src="./assets/images/select-product/select-product-01.png" alt="">
+                                                <p>Madina Collars</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="madina-calf-1" name="group6" type="radio">
+                                            <label for="madina-calf-1">
+                                                <img src="./assets/images/select-product/select-product-02.png" alt="">
+                                                <p>Madina Calf</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="madina-ban-1" name="group6" type="radio">
+                                            <label for="madina-ban-1">
+                                                <img src="./assets/images/select-product/select-product-03.png" alt="">
+                                                <p>Madina Ban</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-select-shape-box fade">
+                            <p class="new-order-title">Select Shape</p>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper d-flex">
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="shape-01" name="group3" type="radio">
+                                            <label for="shape-01">
+                                                <img src="./assets/images/shape/shape-01.png" alt="">
+                                                <p>Shape 1</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="shape-02" name="group3" type="radio">
+                                            <label for="shape-02">
+                                                <img src="./assets/images/shape/shape-02.png" alt="">
+                                                <p>Shape 2</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="shape-03" name="group3" type="radio">
+                                            <label for="shape-03">
+                                                <img src="./assets/images/shape/shape-03.png" alt="">
+                                                <p>Shape 3</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="shape-04" name="group3" type="radio">
+                                            <label for="shape-04">
+                                                <img src="./assets/images/shape/shape-04.png" alt="">
+                                                <p>Shape 4</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="shape-05" name="group3" type="radio">
+                                            <label for="shape-05">
+                                                <img src="./assets/images/shape/shape-05.png" alt="">
+                                                <p>Shape 5</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="shape-06" name="group3" type="radio">
+                                            <label for="shape-06">
+                                                <img src="./assets/images/shape/shape-06.png" alt="">
+                                                <p>Shape 6</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="shape-07" name="group3" type="radio">
+                                            <label for="shape-07">
+                                                <img src="./assets/images/shape/shape-07.png" alt="">
+                                                <p>Shape 7</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-card">
+                                            <input id="shape-08" name="group3" type="radio">
+                                            <label for="shape-08">
+                                                <img src="./assets/images/shape/shape-08.png" alt="">
+                                                <p>Shape 8</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-select-size-box fade">
+                            <p class="new-order-title">Select Size</p>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper d-flex">
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-17" name="group4" type="checkbox">
+                                            <label for="width-17">
+                                                <p>17''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-16" name="group4" type="checkbox">
+                                            <label for="width-16">
+                                                <p>16''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-15" name="group4" type="checkbox">
+                                            <label for="width-15">
+                                                <p>15''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-14" name="group4" type="checkbox">
+                                            <label for="width-14">
+                                                <p>14''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-13" name="group4" type="checkbox">
+                                            <label for="width-13">
+                                                <p>13''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-12" name="group4" type="checkbox">
+                                            <label for="width-12">
+                                                <p>12''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-11" name="group4" type="checkbox">
+                                            <label for="width-11">
+                                                <p>11''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-10" name="group4" type="checkbox">
+                                            <label for="width-10">
+                                                <p>10''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-09" name="group4" type="checkbox">
+                                            <label for="width-09">
+                                                <p>9''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-08" name="group4" type="checkbox">
+                                            <label for="width-08">
+                                                <p>8''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-07" name="group4" type="checkbox">
+                                            <label for="width-07">
+                                                <p>7''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-06" name="group4" type="checkbox">
+                                            <label for="width-06">
+                                                <p>6''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-05" name="group4" type="checkbox">
+                                            <label for="width-05">
+                                                <p>5''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-04" name="group4" type="checkbox">
+                                            <label for="width-04">
+                                                <p>4''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-03" name="group4" type="checkbox">
+                                            <label for="width-03">
+                                                <p>3''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-02" name="group4" type="checkbox">
+                                            <label for="width-02">
+                                                <p>2''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="new-order-size-card">
+                                            <input id="width-01" name="group4" type="checkbox">
+                                            <label for="width-01">
+                                                <p>1''</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-order-detail-1 fade">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Quantity</th>
+                                        <th>Price Per Quantity</th>
+                                        <th>Discount</th>
+                                        <th>Total Price (PKR)</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control" value="17''" disabled>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" value="500">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" value="30">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" value="0.00">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" value="15,000.00">
+                                        </td>
+                                        <td class="pl-2">
+                                            <button class="btn btn-primary">Delete</button>
+                                            <!-- <span class="product-delete">&times;</span> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control" value="16''" disabled>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" value="500">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" value="30">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" value="0.00">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" value="15,000.00">
+                                        </td>
+                                        <td class="pl-2">
+                                            <button class="btn btn-primary">Delete</button>
+                                            <!-- <span class="product-delete">&times;</span> -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="action-btn-box">
+                        <button class="btn btn-primary btn-add-another-product mr-2">Add Another Product</button>
+                        <p class="entered-product mr-auto">Product Added (1)</p>
+                        <button class="btn btn-primary btn-place-product close" type="button" data-dismiss="modal" aria-label="Close">Place Product
+                            <svg class="ml-2" width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="new-order-modal-6 modal fade" id="newCustomer" tabindex="-1" role="dialog" aria-labelledby="newCustomerLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newCustomerLabel">Add New Customer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="new-order-body-box">
+                    <p class="new-order-title mb-2">Customer:</p>
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Customer Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Customer Phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Company Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Discount Value %">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="formGroupExampleInput5" placeholder="Complete Address">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-btn-box mb-5">
+                    <button class="btn btn-primary btn-place-order close ml-auto mr-2" type="button" data-dismiss="modal">Save Customer</button>
+                    <button class="btn btn-primary btn-place-order close mr-auto ml-2" type="button" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="newEmployee" tabindex="-1" role="dialog" aria-labelledby="newEmployeeLabel"
+        style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newEmployeeLabel">New Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput11">Full Name:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput11"
+                                placeholder="Enter Customer Name">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phone-3">Phone:</label>
+                                    <input type="number" class="form-control" id="phone-3"
+                                        placeholder="Enter Phone Number">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="number" class="form-control" id="email" placeholder="Enter Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput12">CNIC Number:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput12"
+                                placeholder="Enter CNIC Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput13">Address</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput13"
+                                placeholder="Enter Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput14">Department:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput14"
+                                placeholder="Enter Employee Department">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="updateEmployee" tabindex="-1" role="dialog" aria-labelledby="updateEmployeeLabel"
+        style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateEmployeeLabel">Update employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput15">Full Name:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput15"
+                                placeholder="Enter Customer Name" value="John Wick">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phone-4">Phone:</label>
+                                    <input type="tel" class="form-control" id="phone-4"
+                                        placeholder="Enter Phone Number" value="0312 1234567">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email-1">Email:</label>
+                                    <input type="email" class="form-control" id="email-1"
+                                        placeholder="Enter Email" value="example@email.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput16">CNIC Number:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput16"
+                                placeholder="Enter CNIC Number" value="12345-12345678-0">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput17">Address</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput17"
+                                placeholder="Enter Address" value="house no 112 block - m mustafabad gulberg - 3">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput18">Department:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput18"
+                                placeholder="Enter Employee Department" value="Operator">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="viewInvoice" tabindex="-1" role="dialog" aria-labelledby="viewInvoiceLabel"
         style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -2960,15 +4086,15 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="formGroupExampleInput">Serial Number</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput"
+                                    <label for="formGroupExampleInput19">Serial Number</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput19"
                                         placeholder="Enter Serial Number" value="V-11">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="quantity">Quantity</label>
-                                    <input type="number" class="form-control" id="quantity"
+                                    <label for="quantity-3">Quantity</label>
+                                    <input type="number" class="form-control" id="quantity-3"
                                         placeholder="Enter quantity" value="22">
                                 </div>
                             </div>
@@ -2976,8 +4102,8 @@
                         <div class="row">
                             <div class="col-md-9">
                                 <div class="form-group">
-                                    <label for="customerNameList">Select Customer Name</label>
-                                    <select id="customerNameList" class="form-control" disabled style="cursor: no-drop;">
+                                    <label for="updateCustomerNameList">Select Customer Name</label>
+                                    <select id="updateCustomerNameList" class="form-control" disabled style="cursor: no-drop;">
                                         <option>Customer Name</option>
                                         <option selected>Aslam</option>
                                         <option>Nadeem</option>
@@ -3004,34 +4130,34 @@
                                     <div class="card card-body">
                                         <div class="card-body">
                                             <div class="form-group">
-                                                <label for="formGroupExampleInput">Customer:</label>
-                                                <input type="text" class="form-control" id="formGroupExampleInput"
+                                                <label for="formGroupExampleInput20">Customer:</label>
+                                                <input type="text" class="form-control" id="formGroupExampleInput20"
                                                     placeholder="Enter Customer Name">
                                             </div>
                                             <div class="form-group">
-                                                <label for="formGroupExampleInput2">Company:</label>
-                                                <input type="text" class="form-control" id="formGroupExampleInput2"
+                                                <label for="formGroupExampleInput21">Company:</label>
+                                                <input type="text" class="form-control" id="formGroupExampleInput21"
                                                     placeholder="Enter Company Name">
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="quantity">Phone:</label>
-                                                        <input type="number" class="form-control" id="quantity"
+                                                        <label for="phone-5">Phone:</label>
+                                                        <input type="number" class="form-control" id="phone-5"
                                                             placeholder="Enter Phone Number">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="price">Office Phone:</label>
-                                                        <input type="number" class="form-control" id="price"
+                                                        <label for="officePhone-1">Office Phone:</label>
+                                                        <input type="number" class="form-control" id="officePhone-1"
                                                             placeholder="Enter Office Phone Number">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="formGroupExampleInput3">Address</label>
-                                                <input type="text" class="form-control" id="formGroupExampleInput3"
+                                                <label for="formGroupExampleInput22">Address</label>
+                                                <input type="text" class="form-control" id="formGroupExampleInput22"
                                                     placeholder="Enter Company Address">
                                             </div>
                                             <button class="btn btn-secondary" type="button" data-toggle="collapse"
@@ -3052,14 +4178,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="price">Price Per Quantity (Rs)</label>
-                                    <input type="number" class="form-control" id="price" placeholder="Enter Price Per Quantity" value="1600">
+                                    <label for="per-price-3">Price Per Quantity (Rs)</label>
+                                    <input type="number" class="form-control" id="per-price-3" placeholder="Enter Price Per Quantity" value="1600">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="price"> Total Price</label>
-                                    <input type="number" class="form-control" id="price" placeholder="Enter Total Price" value="44600">
+                                    <label for="total-price-2"> Total Price</label>
+                                    <input type="number" class="form-control" id="total-price-2" placeholder="Enter Total Price" value="44600">
                                 </div>
                             </div>
                         </div>
@@ -3119,36 +4245,233 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Company Name:</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2"
+                            <label for="formGroupExampleInput23">Company Name:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput23"
                                 placeholder="Enter Company Name" value="Pel">
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="quantity">Office Phone:</label>
-                                    <input type="number" class="form-control" id="quantity"
+                                    <label for="office-phone-1">Office Phone:</label>
+                                    <input type="number" class="form-control" id="office-phone-1"
                                         placeholder="Enter Phone Number" value="0322841803">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="price">Office Email:</label>
-                                    <input type="email" class="form-control" id="price"
-                                        placeholder="Enter Office Email" value="example@email.com">
+                                    <label for="office-email-1">Office Email:</label>
+                                    <input type="email" class="form-control" id="office-email-1" placeholder="Enter Office Email"
+                                        value="example@email.com">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput3">Address</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput3"
-                                placeholder="Enter Company Address" value="house no 112 block - m mustafabad gulberg - 3">
+                            <label for="formGroupExampleInput24">Address</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput24"
+                                placeholder="Enter Company Address"
+                                value="house no 112 block - m mustafabad gulberg - 3">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="stockInventoryUpdateModal" tabindex="-1" role="dialog"
+        aria-labelledby="stockInventoryUpdateModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newOrderLabel">Product Update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput25">Serial Number:</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput25"
+                                        placeholder="Enter Product Serial Number" value="Q-11">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput26">Product Name:</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput26"
+                                        placeholder="Enter Product Name" value="Tiger Nixon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="quantity-4">Quantity:</label>
+                                    <input type="number" class="form-control" id="quantity-4"
+                                        placeholder="Enter Product Quantity" value="22">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="perPrice">Price Per Quantity (Rs):</label>
+                                    <input type="number" class="form-control" id="perPrice"
+                                        placeholder="Enter Per Quantity Price" value="1600">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="total-price">Total Price (Rs):</label>
+                            <input type="number" class="form-control" id="total-price"
+                                placeholder="Enter Total Price" value="4600">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="paymentInfoModal" tabindex="-1" role="dialog"
+        aria-labelledby="paymentInfoModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newOrderLabel">Payment info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 mx-auto">
+                            <div class="px-5 py-3">
+                                <!-- Credit card form tabs -->
+                                <ul role="tablist" class="nav bg-light nav-pills nav-fill mb-3"
+                                    style="border-radius: 30px;">
+                                    <li class="nav-item">
+                                        <a data-toggle="pill" href="#nav-tab-card-2" class="nav-link active"
+                                            style="border-radius: 30px;">
+                                            <i class="fas fa-money-check-alt text-dark" aria-hidden="true"></i>
+                                            Online Transfer
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a data-toggle="pill" href="#nav-tab-paypal-2" class="nav-link"
+                                            style="border-radius: 30px;">
+                                            <i class="fas fa-money-bill-alt text-dark" aria-hidden="true"></i>
+                                            Cash
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- End -->
+
+
+                                <!-- Credit card form content -->
+                                <div class="tab-content">
+
+                                    <!-- credit card info-->
+                                    <div id="nav-tab-card-2" class="tab-pane fade show active">
+                                        <div class="row">
+                                            <div class="col-md-12 table-responsive">
+                                                <table class="table table-hover mb-4">
+                                                    <thead class="bg-gray-300">
+                                                        <tr>
+                                                            <th scope="col" class="text-center">#</th>
+                                                            <th scope="col" class="text-center">Date</th>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col" class="text-center">IBAN</th>
+                                                            <th scope="col" class="text-center">Acount Number</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">1</td>
+                                                            <td class="text-center">18-12-2020</td>
+                                                            <td>Abdul Rehamn</td>
+                                                            <td class="text-center">PK123000000000000000000</td>
+                                                            <td class="text-center">54000**********</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">2</td>
+                                                            <td class="text-center">19-12-2020</td>
+                                                            <td>Abdul Rehamn</td>
+                                                            <td class="text-center">PK123000000000000000000</td>
+                                                            <td class="text-center">54000**********</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">3</td>
+                                                            <td class="text-center">25-12-2020</td>
+                                                            <td>Abdul Rehamn</td>
+                                                            <td class="text-center">PK123000000000000000000</td>
+                                                            <td class="text-center">54000**********</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End -->
+
+                                    <!-- Paypal info -->
+                                    <div id="nav-tab-paypal-2" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-12 table-responsive">
+                                                <table class="table table-hover mb-4">
+                                                    <thead class="bg-gray-300">
+                                                        <tr>
+                                                            <td class="text-center">#</td>
+                                                            <td class="text-center">Date</td>
+                                                            <th scope="col">Customer Name</th>
+                                                            <th scope="col">Receiver Name</th>
+                                                            <th scope="col" class="text-center">Amount(Rs)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">1</td>
+                                                            <td class="text-center">17-12-2020</td>
+                                                            <td>Mr. Abdul Rehamn</td>
+                                                            <td>Mr. Arsalan</td>
+                                                            <td class="text-center">1,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">2</td>
+                                                            <td class="text-center">23-12-2020</td>
+                                                            <td>Mr. Abdul Rehamn</td>
+                                                            <td>Mr. Arsalan</td>
+                                                            <td class="text-center">1,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">3</td>
+                                                            <td class="text-center">27-12-2020</td>
+                                                            <td>Mr. Abdul Rehamn</td>
+                                                            <td>Mr. Arsalan</td>
+                                                            <td class="text-center">1,000,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End -->
+                                </div>
+                                <!-- End -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -3299,8 +4622,70 @@
                         <p>* You are going to delete this order permanently</p>
                         <form>
                             <div class="form-group">
-                                <label for="reEnterPassword">Password</label>
-                                <input type="password" class="form-control" id="reEnterPassword"
+                                <label for="reEnterPassword-1">Password</label>
+                                <input type="password" class="form-control" id="reEnterPassword-1"
+                                    placeholder="Please Enter Your Password">
+                            </div>
+                        </form>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteCustomerModal" tabindex="-1" role="dialog"
+        aria-labelledby="deleteCustomerModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newCustomerLabel">Delete Customer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <h3 class="card-title mb2">Delete Customer</h3>
+                        <p>* You are going to delete this order permanently</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="reEnterPassword-2">Password</label>
+                                <input type="password" class="form-control" id="reEnterPassword-2"
+                                    placeholder="Please Enter Your Password">
+                            </div>
+                        </form>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="deleteEmployeeModalLabel"
+        style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newEmployeeLabel">Delete Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <h3 class="card-title mb2">Delete Employee</h3>
+                        <p>* You are going to delete this order permanently</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="reEnterPassword-3">Password</label>
+                                <input type="password" class="form-control" id="reEnterPassword-3"
                                     placeholder="Please Enter Your Password">
                             </div>
                         </form>
@@ -3343,10 +4728,10 @@
 
     <script src="./assets/js/main.js"></script>
     <script>
-        $(function() {
+        $(function () {
             var $startDate = $('.start-date');
             var $endDate = $('.end-date');
-        
+
             $startDate.datepicker({
                 autoHide: true,
             });
@@ -3354,7 +4739,7 @@
                 autoHide: true,
                 startDate: $startDate.datepicker('getDate'),
             });
-        
+
             $startDate.on('change', function () {
                 $endDate.datepicker('setStartDate', $startDate.datepicker('getDate'));
             });

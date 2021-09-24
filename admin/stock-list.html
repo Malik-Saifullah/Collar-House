@@ -226,29 +226,29 @@
                             <ul class="nav" id="myPillTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-icon-pill" data-toggle="pill" href="#homePIll" role="tab" aria-controls="homePIll" aria-selected="true">
-                                        Brand 1
+                                        Madina
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-icon-pill" data-toggle="pill" href="#profilePIll" role="tab" aria-controls="profilePIll" aria-selected="false">
-                                        Brand 2
+                                        Pak
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="contact-icon-pill" data-toggle="pill" href="#contactPIll" role="tab" aria-controls="contactPIll" aria-selected="false">
-                                        Brand 3
+                                        Anarkali
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="brand-4-pill" data-toggle="pill" href="#brand4" role="tab" aria-controls="brand4" aria-selected="false">
-                                        Brand 4
+                                        New Madina
                                     </a>
                                 </li>
                                 <li class="nav-item filter-search-box ml-auto">
-                                    <input type="search" placeholder="Search by Invoice Number/amount">
+                                    <input type="search" placeholder="Search ">
                                 </li>
                             </ul>
-                            <div class="tab-content p-0" id="myPillTabContent">
+                            <div class="tab-content p-0" id="inventoryContent">
                                 <div class="tab-pane fade show active" id="homePIll" role="tabpanel" aria-labelledby="home-icon-pill">
                                     <div class="table-responsive">
                                         <table class="table table-hover mb-0">
@@ -258,11 +258,11 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Product</option>
-                                                            <option value="">Product 1</option>
-                                                            <option value="">Product 2</option>
-                                                            <option value="">Product 3</option>
-                                                            <option value="">Product 4</option>
-                                                            <option value="">Product 5</option>
+                                                            <option value="">Cuff</option>
+                                                            <option value="">Ban</option>
+                                                            <option value="">Collars</option>
+                                                            <option value="">Patti</option>
+                                                            
                                                         </select>
                                                     </td>
                                                     <td>
@@ -280,28 +280,27 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Size</option>
-                                                            <option value="">Size 1</option>
-                                                            <option value="">Size 2</option>
-                                                            <option value="">Size 3</option>
-                                                            <option value="">Size 4</option>
-                                                            <option value="">Size 5</option>
+                                                            <option value=""> 1</option>
+                                                            <option value=""> 2</option>
+                                                            <option value=""> 3</option>
+                                                            <option value=""> 4</option>
+                                                            <option value=""> 5</option>
                                                         </select>
                                                     </td>
                                                     <td colspan="2">
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Material</option>
-                                                            <option value="">Material 1</option>
-                                                            <option value="">Material 2</option>
-                                                            <option value="">Material 3</option>
-                                                            <option value="">Material 4</option>
-                                                            <option value="">Material 5</option>
+                                                            <option value="">Regular</option>
+                                                            <option value="">Soft</option>
+                                                            <option value="">Hard</option>
+                                                            <option value="">DD</option>
                                                         </select>
                                                     </td>
                                                     <td colspan="2">
                                                         <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block text-right">Filter Result</label>
-                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <label class="filter-title d-block text-right">Available Quantity</label>
+                                                            <!-- <p class="filter-title text-right">Available Quantity</p> -->
                                                             <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
                                                         </div>
                                                     </td>
@@ -309,21 +308,21 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="bg-gray-300">
-                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Sr.</th>
                                                     <th scope="col">Product Name</th>
                                                     <th scope="col">Shape</th>
                                                     <th scope="col">Size</th>
                                                     <th scope="col">Material</th>
-                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
+                                                    <th scope="col" class="text-center">Price Per Qty.</th>
                                                     <th scope="col">Total Quantity</th>
-                                                    <th scope="col" class="text-right">Action</th>
+                                                    <th scope="col" class="text-center">Action</th>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Product 1</td>
+                                                    <td>Madina patti</td>
                                                     <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td> 1</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -334,10 +333,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina calf</td>
+                                                    <td>Shape 2</td>
+                                                    <td>2</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -348,12 +347,13 @@
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina collars</td>
+                                                    <td>Shape 3</td>
+                                                    <td> 3</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
+                                                    </td>
                                                     <td class="text-right">
                                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
                                                             Delete
@@ -362,10 +362,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina Ban</td>
+                                                    <td>Shape 4</td>
+                                                    <td>4</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -376,10 +376,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina Patti</td>
+                                                    <td>Shape 5</td>
+                                                    <td> 5</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -390,10 +390,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina collars</td>
+                                                    <td>Shape 6</td>
+                                                    <td> 6</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -404,10 +404,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina ban</td>
+                                                    <td>Shape 7</td>
+                                                    <td>7</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -418,10 +418,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina collars</td>
+                                                    <td>Shape </td>
+                                                    <td>8</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -430,12 +430,12 @@
                                                         </button>
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <tr>  
                                                     <td>9</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina patti</td>
+                                                    <td>Shape 9</td>
+                                                    <td>9</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -444,12 +444,12 @@
                                                         </button>
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <tr>  
                                                     <td>10</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Madina Ban</td>
+                                                    <td>Shape 10</td>
+                                                    <td>10</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -507,11 +507,11 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Product</option>
-                                                            <option value="">Product 1</option>
-                                                            <option value="">Product 2</option>
-                                                            <option value="">Product 3</option>
-                                                            <option value="">Product 4</option>
-                                                            <option value="">Product 5</option>
+                                                            <option value="">Cuff</option>
+                                                            <option value="">Ban</option>
+                                                            <option value="">Collars</option>
+                                                            <option value="">Patti</option>
+                                                            
                                                         </select>
                                                     </td>
                                                     <td>
@@ -529,28 +529,27 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Size</option>
-                                                            <option value="">Size 1</option>
-                                                            <option value="">Size 2</option>
-                                                            <option value="">Size 3</option>
-                                                            <option value="">Size 4</option>
-                                                            <option value="">Size 5</option>
+                                                            <option value=""> 1</option>
+                                                            <option value=""> 2</option>
+                                                            <option value=""> 3</option>
+                                                            <option value=""> 4</option>
+                                                            <option value=""> 5</option>
                                                         </select>
                                                     </td>
                                                     <td colspan="2">
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Material</option>
-                                                            <option value="">Material 1</option>
-                                                            <option value="">Material 2</option>
-                                                            <option value="">Material 3</option>
-                                                            <option value="">Material 4</option>
-                                                            <option value="">Material 5</option>
+                                                            <option value="">Regular</option>
+                                                            <option value="">Soft</option>
+                                                            <option value="">Hard</option>
+                                                            <option value="">DD</option>
                                                         </select>
                                                     </td>
                                                     <td colspan="2">
                                                         <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block text-right">Filter Result</label>
-                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <label class="filter-title d-block text-right">Available Quantity</label>
+                                                            <!-- <p class="filter-title text-right">Available Quantity</p> -->
                                                             <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
                                                         </div>
                                                     </td>
@@ -558,21 +557,21 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="bg-gray-300">
-                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Sr.</th>
                                                     <th scope="col">Product Name</th>
                                                     <th scope="col">Shape</th>
                                                     <th scope="col">Size</th>
                                                     <th scope="col">Material</th>
-                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
+                                                    <th scope="col" class="text-center">Price Per Qty.</th>
                                                     <th scope="col">Total Quantity</th>
                                                     <th scope="col" class="text-right">Action</th>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Product 1</td>
+                                                    <td>Pak patti</td>
                                                     <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td> 1</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -583,10 +582,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak calf</td>
+                                                    <td>Shape 2</td>
+                                                    <td>2</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -597,10 +596,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak collars</td>
+                                                    <td>Shape 3</td>
+                                                    <td> 3</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -611,10 +610,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak Ban</td>
+                                                    <td>Shape 4</td>
+                                                    <td>4</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -625,10 +624,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak Patti</td>
+                                                    <td>Shape 5</td>
+                                                    <td> 5</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -637,12 +636,12 @@
                                                         </button>
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <tr> 
                                                     <td>6</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak collars</td>
+                                                    <td>Shape 6</td>
+                                                    <td> 6</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -653,10 +652,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak ban</td>
+                                                    <td>Shape 7</td>
+                                                    <td>7</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -667,10 +666,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak collars</td>
+                                                    <td>Shape </td>
+                                                    <td>8</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -681,10 +680,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>9</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak patti</td>
+                                                    <td>Shape 9</td>
+                                                    <td>9</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -695,10 +694,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Pak Ban</td>
+                                                    <td>Shape 10</td>
+                                                    <td>10</td>
+                                                    <td>regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -753,21 +752,14 @@
                                             <thead>
                                                 <tr>
                                                     <td colspan="2">
-                                                        <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block">Invoice Number:</label>
-                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
-                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
-                                                        </div>
-                                                    </td>
-                                                    <td>
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Product</option>
-                                                            <option value="">Product 1</option>
-                                                            <option value="">Product 2</option>
-                                                            <option value="">Product 3</option>
-                                                            <option value="">Product 4</option>
-                                                            <option value="">Product 5</option>
+                                                            <option value="">Cuff</option>
+                                                            <option value="">Ban</option>
+                                                            <option value="">Collars</option>
+                                                            <option value="">Patti</option>
+                                                            
                                                         </select>
                                                     </td>
                                                     <td>
@@ -785,28 +777,27 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Size</option>
-                                                            <option value="">Size 1</option>
-                                                            <option value="">Size 2</option>
-                                                            <option value="">Size 3</option>
-                                                            <option value="">Size 4</option>
-                                                            <option value="">Size 5</option>
+                                                            <option value=""> 1</option>
+                                                            <option value=""> 2</option>
+                                                            <option value=""> 3</option>
+                                                            <option value=""> 4</option>
+                                                            <option value=""> 5</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Material</option>
-                                                            <option value="">Material 1</option>
-                                                            <option value="">Material 2</option>
-                                                            <option value="">Material 3</option>
-                                                            <option value="">Material 4</option>
-                                                            <option value="">Material 5</option>
+                                                            <option value="">Regular</option>
+                                                            <option value="">Soft</option>
+                                                            <option value="">Hard</option>
+                                                            <option value="">DD</option>
                                                         </select>
                                                     </td>
                                                     <td colspan="2">
                                                         <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block text-right">Filter Result</label>
-                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <label class="filter-title d-block text-right">Available Quantity</label>
+                                                            <!-- <p class="filter-title text-right">Available Quantity</p> -->
                                                             <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
                                                         </div>
                                                     </td>
@@ -814,21 +805,21 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="bg-gray-300">
-                                                    <th scope="col">No#</th>
+                                                    <th scope="col">Sr.</th>
                                                     <th scope="col">Product Name</th>
                                                     <th scope="col">Shape</th>
                                                     <th scope="col">Size</th>
                                                     <th scope="col">Material</th>
-                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
+                                                    <th scope="col" class="text-center">Price Per Qty.</th>
                                                     <th scope="col">Total Quantity</th>
                                                     <th scope="col" class="text-right">Action</th>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Product 1</td>
+                                                    <td>Anarkali ban </td>
                                                     <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>1</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -839,10 +830,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali cuff</td>
+                                                    <td>Shape 2</td>
+                                                    <td> 2</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -853,10 +844,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali collars</td>
+                                                    <td>Shape 3</td>
+                                                    <td> 3</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -867,10 +858,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali ban</td>
+                                                    <td>Shape 4</td>
+                                                    <td> 4</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -881,10 +872,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali cuff</td>
+                                                    <td>Shape 5</td>
+                                                    <td> 5</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -895,10 +886,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali patti</td>
+                                                    <td>Shape 6</td>
+                                                    <td>6 </td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -909,10 +900,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali ban></td>
+                                                    <td>Shape 7</td>
+                                                    <td>7</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -923,10 +914,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali cuff</td>
+                                                    <td>Shape 8</td>
+                                                    <td> 8</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -937,10 +928,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>9</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali collars</td>
+                                                    <td>Shape 9</td>
+                                                    <td>9</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -951,10 +942,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>Anarkali cuff</td>
+                                                    <td>Shape 10</td>
+                                                    <td> 10</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1009,21 +1000,14 @@
                                             <thead>
                                                 <tr>
                                                     <td colspan="2">
-                                                        <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block">Invoice Number:</label>
-                                                            <!-- <p class="filter-title">Invoice Number:</p> -->
-                                                            <input type="text" value="NM-1321-9999" placeholder="enter invoice number">
-                                                        </div>
-                                                    </td>
-                                                    <td>
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Product</option>
-                                                            <option value="">Product 1</option>
-                                                            <option value="">Product 2</option>
-                                                            <option value="">Product 3</option>
-                                                            <option value="">Product 4</option>
-                                                            <option value="">Product 5</option>
+                                                            <option value="">Cuff</option>
+                                                            <option value="">Ban</option>
+                                                            <option value="">Collars</option>
+                                                            <option value="">Patti</option>
+                                                            
                                                         </select>
                                                     </td>
                                                     <td>
@@ -1041,28 +1025,27 @@
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Size</option>
-                                                            <option value="">Size 1</option>
-                                                            <option value="">Size 2</option>
-                                                            <option value="">Size 3</option>
-                                                            <option value="">Size 4</option>
-                                                            <option value="">Size 5</option>
+                                                            <option value=""> 1</option>
+                                                            <option value=""> 2</option>
+                                                            <option value=""> 3</option>
+                                                            <option value=""> 4</option>
+                                                            <option value=""> 5</option>
                                                         </select>
                                                     </td>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <label class="filter-title d-block mb-3"></label>
                                                         <select>
                                                             <option value="">Select Material</option>
-                                                            <option value="">Material 1</option>
-                                                            <option value="">Material 2</option>
-                                                            <option value="">Material 3</option>
-                                                            <option value="">Material 4</option>
-                                                            <option value="">Material 5</option>
+                                                            <option value="">Regular</option>
+                                                            <option value="">Soft</option>
+                                                            <option value="">Hard</option>
+                                                            <option value="">DD</option>
                                                         </select>
                                                     </td>
                                                     <td colspan="2">
                                                         <div class="filter-by-invoice-number">
-                                                            <label class="filter-title d-block text-right">Filter Result</label>
-                                                            <!-- <p class="filter-title text-right">Filter Result</p> -->
+                                                            <label class="filter-title d-block text-right">Available Quantity</label>
+                                                            <!-- <p class="filter-title text-right">Available Quantity</p> -->
                                                             <input type="text" class="w-100 text-right form-control" value="" placeholder="00.00" style="font-size: 14px;" disabled="">
                                                         </div>
                                                     </td>
@@ -1070,21 +1053,21 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="bg-gray-300">
-                                                    <th scope="col">No#</th>
-                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">Sr.</th>
+                                                    <th scope="col">New MadinaName</th>
                                                     <th scope="col">Shape</th>
                                                     <th scope="col">Size</th>
                                                     <th scope="col">Material</th>
-                                                    <th scope="col" class="text-center">Price Per Quantity(Rs.)</th>
+                                                    <th scope="col" class="text-center">Price Per Qty</th>
                                                     <th scope="col">Total Quantity</th>
                                                     <th scope="col" class="text-right">Action</th>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Product 1</td>
+                                                    <td>New Madina ban</td>
                                                     <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td> 1</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1095,10 +1078,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina collars</td>
+                                                    <td>Shape 2</td>
+                                                    <td> 2</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1109,10 +1092,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina ban</td>
+                                                    <td>Shape 3</td>
+                                                    <td> 3</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1123,10 +1106,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina patti </td>
+                                                    <td>Shape 4</td>
+                                                    <td> 4</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1137,10 +1120,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina cuff</td>
+                                                    <td>Shape 5</td>
+                                                    <td>5</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1151,10 +1134,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina ban</td>
+                                                    <td>Shape 6</td>
+                                                    <td> 6</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1165,10 +1148,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina patti</td>
+                                                    <td>Shape 7</td>
+                                                    <td>7</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1179,10 +1162,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina collars</td>
+                                                    <td>Shape 8</td>
+                                                    <td>8</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1193,10 +1176,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>9</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina cuff</td>
+                                                    <td>Shape 9</td>
+                                                    <td> 9</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
@@ -1207,10 +1190,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
-                                                    <td>Product 1</td>
-                                                    <td>Shape 1</td>
-                                                    <td>Size 1</td>
-                                                    <td>Material 1</td>
+                                                    <td>New Madina cuff</td>
+                                                    <td>Shape 10</td>
+                                                    <td>10</td>
+                                                    <td>Regular</td>
                                                     <td class="text-center">32</td>
                                                     <td>3231234</td>
                                                     <td class="text-right">
