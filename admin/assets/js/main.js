@@ -267,6 +267,7 @@ $(document).ready(function () {
 /*=========================================
 			profile-img-upload
 =========================================*/
+// add product img
 $(document).ready(function () {
 	var readURL = function (input) {
 		if (input.files && input.files[0]) {
@@ -285,6 +286,8 @@ $(document).ready(function () {
 		$(".file-upload").click();
 	});
 });
+
+// add product shape img
 $(document).ready(function () {
 	var readURL = function (input) {
 		if (input.files && input.files[0]) {
@@ -301,5 +304,25 @@ $(document).ready(function () {
 	});
 	$(".upload-button-1").on('click', function () {
 		$(".file-upload-1").click();
+	});
+});
+
+// add employee img
+$(document).ready(function () {
+	var readURL = function (input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.profile-pic-2').show();
+				$('.profile-pic-2').attr('src', e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	};
+	$(".file-upload-2").on('change', function () {
+		readURL(this);
+	});
+	$(".upload-button-2").on('click', function () {
+		$(".file-upload-2").click();
 	});
 });

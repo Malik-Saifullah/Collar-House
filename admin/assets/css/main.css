@@ -267,7 +267,7 @@
   -webkit-box-shadow: 0px 4px 4px 0px #00000040;
           box-shadow: 0px 4px 4px 0px #00000040;
 }
-.profile-img-box .img-box .profile-pic, .profile-img-box .img-box .profile-pic-1 {
+.profile-img-box .img-box .profile-pic, .profile-img-box .img-box .profile-pic-1, .profile-img-box .img-box .profile-pic-2 {
   max-width: 90px;
   max-height: 90px;
   margin-left: auto;
@@ -278,7 +278,7 @@
   margin-left: -12px;
   margin-top: -12px;
 }
-.profile-img-box .img-box .file-upload, .profile-img-box .img-box .file-upload {
+.profile-img-box .img-box .file-upload, .profile-img-box .img-box .file-upload-1, .profile-img-box .img-box .file-upload-2 {
   display: none;
 }
 .profile-img-box .img-box .circle {
@@ -307,12 +307,12 @@
   max-height: 66px;
   position: relative;
 }
-.profile-img-box .add-img-box .img-box .upload-button, .profile-img-box .add-img-box .img-box .upload-button-1 {
+.profile-img-box .add-img-box .img-box .upload-button, .profile-img-box .add-img-box .img-box .upload-button-1, .profile-img-box .add-img-box .img-box .upload-button-2 {
   width: 66px;
   height: 66px;
   border-radius: 9px;
 }
-.profile-img-box .add-img-box .img-box .profile-pic, .profile-img-box .add-img-box .img-box .profile-pic-1 {
+.profile-img-box .add-img-box .img-box .profile-pic, .profile-img-box .add-img-box .img-box .profile-pic-1, .profile-img-box .add-img-box .img-box .profile-pic-2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -326,7 +326,7 @@
      object-fit: cover;
   z-index: 1;
 }
-.profile-img-box .add-img-box .img-box .file-upload, .profile-img-box .add-img-box .img-box .file-upload-1 {
+.profile-img-box .add-img-box .img-box .file-upload, .profile-img-box .add-img-box .img-box .file-upload-1, .profile-img-box .add-img-box .img-box .file-upload-2 {
   display: none;
 }
 .profile-img-box .add-img-box .img-box img {
@@ -1980,4 +1980,113 @@ a.pagination-link.active {
 #myPillTabContent tr:last-child td,
 #inventoryContent tr:last-child td {
   border-top: 1px solid #dee2e6;
+}
+
+/*=======================================================
+                        employee
+=======================================================*/
+#newEmployee .profile-img-box {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+#newEmployee .img-box {
+  max-width: 86px;
+  max-height: 86px;
+}
+#newEmployee .img-box .circle {
+  width: 86px;
+  height: 86px;
+}
+#newEmployee .img-box .profile-pic-2 {
+  max-width: 110px;
+  max-height: 110px;
+}
+
+.employee-info-filter-box .form-control:focus {
+  background-color: #eee;
+  border: 1px solid #ced4da;
+}
+
+.employee-info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 11px;
+  min-height: 151px;
+  position: relative;
+  padding: 35px 44px 34px;
+  margin: 10px 5px;
+}
+.employee-info-box th, .employee-info-box td {
+  border: unset;
+}
+
+.employee-info-col-3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.employee-info-col-4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.employee-img {
+  border-radius: 50%;
+  max-width: 82px;
+  margin-left: 0;
+}
+
+.employee-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.employee-email,
+.employee-nummber,
+.employee-cnic,
+.employee-address,
+.employee-designation {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.employee-designation {
+  margin-top: auto;
+}
+
+.btn-action-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+.btn-action-list button {
+  background-color: transparent;
+  border: unset;
+  cursor: pointer;
 }

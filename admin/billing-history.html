@@ -256,22 +256,24 @@
                             <table class="table table-hover mb-4">
                                 <thead class="bg-gray-300">
                                     <tr>
-                                        <th scope="col" class="text-center">#</th>
-                                        <th scope="col">Serial Number</th>
-                                        <th scope="col" class="text-center">Quantity</th>
-                                        <th scope="col" class="text-center">Price Per Quantity (Rs)</th>
-                                        <th scope="col" class="text-center">Total Price (Rs)</th>
-                                        <th scope="col" class="text-center">Delivery Status</th>
+                                        <th scope="col" class="text-center">Sr.</th>
+                                        <th scope="col" class="text-center">Invoice</th>
+                                        <th scope="col" class="text-center">Billing name</th>
+                                        <th scope="col" class="text-center">Order date</th>
+                                        <th scope="col" class="text-center">Dispatch date</th>
+                                        <th scope="col" class="text-center">City, province, country</th>
+                                        <th scope="col" class="text-center">Dilevery status</th>
                                         <th scope="col" class="text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row" class="text-center">1</th>
-                                        <td>V-11</td>
-                                        <td class="text-center">22</td>
-                                        <td class="text-center">1600</td>
-                                        <td class="text-center">44600</td>
+                                        <td class="text-center">123-NMS-345</td>
+                                        <td class="text-center">Ali</td>
+                                        <td class="text-center">23-09-21</td>
+                                        <td class="text-center">30-09-21</td>
+                                        <td class="text-center">Karachi, Sindh, Pakistan</td>
                                         <td class="text-center">
                                             <button type="button" class="btn" style="background: transparent;" data-toggle="modal" data-target="#deliveryStatusModal">
                                                 <i class="nav-icon i-Pen-2 mr-2" style="color: orange;"></i>
@@ -279,21 +281,19 @@
                                             </button>
                                         </td>
                                         <td class="text-center">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#UpdateModal">
-                                                <i class="nav-icon i-Pen-2"></i>
-                                            </button>
+                                            
                                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
                                                 <i class="nav-icon i-Close-Window"></i>
                                             </button>
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#unpublishInvoice">View</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-center">1</th>
-                                        <td>Q-11</td>
-                                        <td class="text-center">22</td>
-                                        <td class="text-center">1600</td>
-                                        <td class="text-center">44600</td>
+                                        <td class="text-center">123-NMS-345</td>
+                                        <td class="text-center">Ali</td>
+                                        <td class="text-center">23-09-21</td>
+                                        <td class="text-center">30-09-21</td>
+                                        <td class="text-center">Lahore, Punjab, Pakistan</td>
                                         <td class="text-center">
                                             <button type="button" class="btn" style="background: transparent;" data-toggle="modal" data-target="#deliveryStatusModal">
                                                 <i class="nav-icon i-Pen-2 mr-2" style="color: orange;"></i>
@@ -301,13 +301,9 @@
                                             </button>
                                         </td>
                                         <td class="text-center">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#UpdateModal">
-                                                <i class="nav-icon i-Pen-2"></i>
-                                            </button>
                                             <button type="button" class="btn btn-primary" id="alert-confirm">
                                                 <i class="nav-icon i-Close-Window"></i>
                                             </button>
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#unpublishInvoice">View</button>
                                         </td>
                                     </tr>
                                 </tbody>
