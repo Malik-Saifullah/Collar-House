@@ -326,3 +326,23 @@ $(document).ready(function () {
 		$(".file-upload-2").click();
 	});
 });
+
+// add employee img
+$(document).ready(function () {
+	var readURL = function (input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.profile-pic-3').show();
+				$('.profile-pic-3').attr('src', e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	};
+	$(".file-upload-3").on('change', function () {
+		readURL(this);
+	});
+	$(".upload-button-3").on('click', function () {
+		$(".file-upload-3").click();
+	});
+});
