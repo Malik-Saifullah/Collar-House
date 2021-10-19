@@ -200,7 +200,7 @@
         border-radius: 50%;
         box-shadow: 0px 4px 4px 0px #00000040;
 
-        .profile-pic,.profile-pic-1,.profile-pic-2,.profile-pic-3 {
+        .profile-pic,.profile-pic-1,.profile-pic-2,.profile-pic-3 ,.profile-pic-4 {
             max-width: 90px;
             max-height: 90px;
             margin-left: auto;
@@ -212,7 +212,7 @@
             margin-top: -12px;
         }
 
-        .file-upload,.file-upload-1,.file-upload-2,.file-upload-3 {
+        .file-upload,.file-upload-1,.file-upload-2,.file-upload-3,.file-upload-4 {
             display: none;
         }
 
@@ -244,13 +244,13 @@
             max-height: 66px;
             position: relative;
 
-            .upload-button,.upload-button-1,.upload-button-2,.upload-button-3 {
+            .upload-button,.upload-button-1,.upload-button-2,.upload-button-3,.upload-button-4 {
                 width: 66px;
                 height: 66px;
                 border-radius: 9px;
             }
 
-            .profile-pic,.profile-pic-1,.profile-pic-2,.profile-pic-3 {
+            .profile-pic,.profile-pic-1,.profile-pic-2,.profile-pic-3,.profile-pic-4 {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -264,7 +264,7 @@
                 z-index: 1;
             }
 
-            .file-upload,.file-upload-1,.file-upload-2,.file-upload-3 {
+            .file-upload,.file-upload-1,.file-upload-2,.file-upload-3,.file-upload-4 {
                 display: none;
             }
 

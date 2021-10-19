@@ -267,7 +267,7 @@
   -webkit-box-shadow: 0px 4px 4px 0px #00000040;
           box-shadow: 0px 4px 4px 0px #00000040;
 }
-.profile-img-box .img-box .profile-pic, .profile-img-box .img-box .profile-pic-1, .profile-img-box .img-box .profile-pic-2, .profile-img-box .img-box .profile-pic-3 {
+.profile-img-box .img-box .profile-pic, .profile-img-box .img-box .profile-pic-1, .profile-img-box .img-box .profile-pic-2, .profile-img-box .img-box .profile-pic-3, .profile-img-box .img-box .profile-pic-4 {
   max-width: 90px;
   max-height: 90px;
   margin-left: auto;
@@ -278,7 +278,7 @@
   margin-left: -12px;
   margin-top: -12px;
 }
-.profile-img-box .img-box .file-upload, .profile-img-box .img-box .file-upload-1, .profile-img-box .img-box .file-upload-2, .profile-img-box .img-box .file-upload-3 {
+.profile-img-box .img-box .file-upload, .profile-img-box .img-box .file-upload-1, .profile-img-box .img-box .file-upload-2, .profile-img-box .img-box .file-upload-3, .profile-img-box .img-box .file-upload-4 {
   display: none;
 }
 .profile-img-box .img-box .circle {
@@ -307,12 +307,12 @@
   max-height: 66px;
   position: relative;
 }
-.profile-img-box .add-img-box .img-box .upload-button, .profile-img-box .add-img-box .img-box .upload-button-1, .profile-img-box .add-img-box .img-box .upload-button-2, .profile-img-box .add-img-box .img-box .upload-button-3 {
+.profile-img-box .add-img-box .img-box .upload-button, .profile-img-box .add-img-box .img-box .upload-button-1, .profile-img-box .add-img-box .img-box .upload-button-2, .profile-img-box .add-img-box .img-box .upload-button-3, .profile-img-box .add-img-box .img-box .upload-button-4 {
   width: 66px;
   height: 66px;
   border-radius: 9px;
 }
-.profile-img-box .add-img-box .img-box .profile-pic, .profile-img-box .add-img-box .img-box .profile-pic-1, .profile-img-box .add-img-box .img-box .profile-pic-2, .profile-img-box .add-img-box .img-box .profile-pic-3 {
+.profile-img-box .add-img-box .img-box .profile-pic, .profile-img-box .add-img-box .img-box .profile-pic-1, .profile-img-box .add-img-box .img-box .profile-pic-2, .profile-img-box .add-img-box .img-box .profile-pic-3, .profile-img-box .add-img-box .img-box .profile-pic-4 {
   position: absolute;
   top: 0;
   left: 0;
@@ -326,7 +326,7 @@
      object-fit: cover;
   z-index: 1;
 }
-.profile-img-box .add-img-box .img-box .file-upload, .profile-img-box .add-img-box .img-box .file-upload-1, .profile-img-box .add-img-box .img-box .file-upload-2, .profile-img-box .add-img-box .img-box .file-upload-3 {
+.profile-img-box .add-img-box .img-box .file-upload, .profile-img-box .add-img-box .img-box .file-upload-1, .profile-img-box .add-img-box .img-box .file-upload-2, .profile-img-box .add-img-box .img-box .file-upload-3, .profile-img-box .add-img-box .img-box .file-upload-4 {
   display: none;
 }
 .profile-img-box .add-img-box .img-box img {

@@ -346,3 +346,23 @@ $(document).ready(function () {
 		$(".file-upload-3").click();
 	});
 });
+
+// add Category img
+$(document).ready(function () {
+	var readURL = function (input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.profile-pic-4').show();
+				$('.profile-pic-4').attr('src', e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	};
+	$(".file-upload-4").on('change', function () {
+		readURL(this);
+	});
+	$(".upload-button-4").on('click', function () {
+		$(".file-upload-4").click();
+	});
+});
