@@ -210,6 +210,159 @@ $(document).ready(function () {
 	$('.customer-table-header .filter-by-date svg').click(function () {
 		$('.calendar-field-box').toggle();
 	});
+
+	
+	/*=========================================
+					modal-close
+	=========================================*/
+	$('.close').click(function () {
+		$('.modal').hide();
+		$('.modal-backdrop').hide();
+	});
+	$('#newProduct .btn-place-product').click(function () {
+		$('body').css('padding-right', '17px');
+		$('body').css('overflow-y', 'hidden');
+		$('.new-order-modal-2').css('overflow-y', 'auto');
+	});
+
+	$('#newProduct .select-brand-box .new-order-card').click(function () {
+		$('#newProduct .select-product-box').addClass('show');
+	});
+
+	$('#newProduct .select-product-box .new-order-card').click(function () {
+		$('#newProduct .select-shape-box').addClass('show');
+	});
+
+	$('#newProduct .select-shape-box .new-order-card').click(function () {
+		$('#newProduct .select-size-box').addClass('show');
+	});
+
+	$('#newProduct .select-size-box .new-order-size-card').click(function () {
+		$('#newProduct .new-order-detail').addClass('show');
+	});
+
+
+	$('#newProduct .action-btn-box .btn-add-another-product').click(function () {
+		$('#newProduct .add-another-product').removeClass('d-none');
+	});
+
+	$('#newProduct .new-select-brand-box .new-order-card').click(function () {
+		$('#newProduct .new-select-product-box').addClass('show');
+	});
+
+	$('#newProduct .new-select-product-box .new-order-card').click(function () {
+		$('#newProduct .new-select-shape-box').addClass('show');
+	});
+
+	$('#newProduct .new-select-shape-box .new-order-card').click(function () {
+		$('#newProduct .new-select-size-box').addClass('show');
+	});
+
+	$('#newProduct .new-select-size-box .new-order-size-card').click(function () {
+		$('#newProduct .new-order-detail-1').addClass('show');
+	});
 });
 
 
+/*=========================================
+			profile-img-upload
+=========================================*/
+// add product img
+$(document).ready(function () {
+	var readURL = function (input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.profile-pic').show();
+				$('.profile-pic').attr('src', e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	};
+	$(".file-upload").on('change', function () {
+		readURL(this);
+	});
+	$(".upload-button").on('click', function () {
+		$(".file-upload").click();
+	});
+});
+
+// add product shape img
+$(document).ready(function () {
+	var readURL = function (input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.profile-pic-1').show();
+				$('.profile-pic-1').attr('src', e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	};
+	$(".file-upload-1").on('change', function () {
+		readURL(this);
+	});
+	$(".upload-button-1").on('click', function () {
+		$(".file-upload-1").click();
+	});
+});
+
+// add employee img
+$(document).ready(function () {
+	var readURL = function (input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.profile-pic-2').show();
+				$('.profile-pic-2').attr('src', e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	};
+	$(".file-upload-2").on('change', function () {
+		readURL(this);
+	});
+	$(".upload-button-2").on('click', function () {
+		$(".file-upload-2").click();
+	});
+});
+
+// add employee img
+$(document).ready(function () {
+	var readURL = function (input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.profile-pic-3').show();
+				$('.profile-pic-3').attr('src', e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	};
+	$(".file-upload-3").on('change', function () {
+		readURL(this);
+	});
+	$(".upload-button-3").on('click', function () {
+		$(".file-upload-3").click();
+	});
+});
+
+// add Category img
+$(document).ready(function () {
+	var readURL = function (input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.profile-pic-4').show();
+				$('.profile-pic-4').attr('src', e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	};
+	$(".file-upload-4").on('change', function () {
+		readURL(this);
+	});
+	$(".upload-button-4").on('click', function () {
+		$(".file-upload-4").click();
+	});
+});
